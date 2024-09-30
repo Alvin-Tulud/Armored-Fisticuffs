@@ -6,5 +6,5 @@ public abstract class State : MonoBehaviour
 {
     public abstract State RunCurrentState();
 
-    public abstract State getDestination();
+    public abstract State ChangeState();
 }

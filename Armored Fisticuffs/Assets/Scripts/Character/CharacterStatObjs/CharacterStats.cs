@@ -34,7 +34,7 @@ public class CharacterStats : ScriptableObject
         public struct Grounded_Jab
         {
             public int Damage;
-            public int Hit_Radius;
+            public Vector2 Hit_Size;
             public Vector3 Hit_Location;
             public Vector2 Hurt_Size;
             public Vector3 Hurt_Location;
@@ -49,7 +49,7 @@ public class CharacterStats : ScriptableObject
         public struct Grounded_Heavy_Jab
         {
             public int Damage;
-            public int Hit_Radius;
+            public Vector2 Hit_Size;
             public Vector3 Hit_Location;
             public Vector2 Hurt_Size;
             public Vector3 Hurt_Location;
@@ -64,7 +64,7 @@ public class CharacterStats : ScriptableObject
         public struct Grounded_SideTilt
         {
             public int Damage;
-            public int Hit_Radius;
+            public Vector2 Hit_Size;
             public Vector3 Hit_Location;
             public Vector2 Hurt_Size;
             public Vector3 Hurt_Location;
@@ -79,7 +79,7 @@ public class CharacterStats : ScriptableObject
         public struct Grounded_Heavy_SildeTilt
         {
             public int Damage;
-            public int Hit_Radius;
+            public Vector2 Hit_Size;
             public Vector3 Hit_Location;
             public Vector2 Hurt_Size;
             public Vector3 Hurt_Location;
@@ -94,7 +94,7 @@ public class CharacterStats : ScriptableObject
         public struct Grounded_DownTilt
         {
             public int Damage;
-            public int Hit_Radius;
+            public Vector2 Hit_Size;
             public Vector3 Hit_Location;
             public Vector2 Hurt_Size;
             public Vector3 Hurt_Location;
@@ -109,7 +109,7 @@ public class CharacterStats : ScriptableObject
         public struct Grounded_Heavy_Down_Tilt
         {
             public int Damage;
-            public int Hit_Radius;
+            public Vector2 Hit_Size;
             public Vector3 Hit_Location;
             public Vector2 Hurt_Size;
             public Vector3 Hurt_Location;
@@ -124,7 +124,7 @@ public class CharacterStats : ScriptableObject
         public struct Grounded_UpTilt
         {
             public int Damage;
-            public int Hit_Radius;
+            public Vector2 Hit_Size;
             public Vector3 Hit_Location;
             public Vector2 Hurt_Size;
             public Vector3 Hurt_Location;
@@ -139,7 +139,7 @@ public class CharacterStats : ScriptableObject
         public struct Grounded_Heavy_Up_Tilt
         {
             public int Damage;
-            public int Hit_Radius;
+            public Vector2 Hit_Size;
             public Vector3 Hit_Location;
             public Vector2 Hurt_Size;
             public Vector3 Hurt_Location;
@@ -164,7 +164,7 @@ public class CharacterStats : ScriptableObject
         public struct Aerial_Jab
         {
             public int Damage;
-            public int Hit_Radius;
+            public Vector2 Hit_Size;
             public Vector3 Hit_Location;
             public Vector2 Hurt_Size;
             public Vector3 Hurt_Location;
@@ -179,7 +179,7 @@ public class CharacterStats : ScriptableObject
         public struct Aerial_SideTilt
         {
             public int Damage;
-            public int Hit_Radius;
+            public Vector2 Hit_Size;
             public Vector3 Hit_Location;
             public Vector2 Hurt_Size;
             public Vector3 Hurt_Location;
@@ -194,7 +194,7 @@ public class CharacterStats : ScriptableObject
         public struct Aerial_DownTilt
         {
             public int Damage;
-            public int Hit_Radius;
+            public Vector2 Hit_Size;
             public Vector3 Hit_Location;
             public Vector2 Hurt_Size;
             public Vector3 Hurt_Location;
@@ -209,7 +209,7 @@ public class CharacterStats : ScriptableObject
         public struct Aerial_UpTilt
         {
             public int Damage;
-            public int Hit_Radius;
+            public Vector2 Hit_Size;
             public Vector3 Hit_Location;
             public Vector2 Hurt_Size;
             public Vector3 Hurt_Location;

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Grounded_State))]
+[RequireComponent(typeof(Aerial_State))]
 public class StateManager : MonoBehaviour
 {
     public State currentState;
