@@ -6,31 +6,45 @@ using UnityEngine.InputSystem;
 public class Grounded_State : State
 {
     private Aerial_State Aerial_;
-    private InputAction CharMove;
+    private Rigidbody Rigidbody_;
+    private bool isRunning;
+
+    private List<inputs> input_string;
 
     private void Start()
     {
         Aerial_ = GetComponent<Aerial_State>();
-        CharMove = GetComponent<InputAction>();
+        Rigidbody_ = GetComponent<Rigidbody>();
+        isRunning = false;
+
+        input_string = new List<inputs>(3);
     }
 
     public override State ChangeState()
     {
+        isRunning = false;
         return Aerial_;
     }
 
     public override State RunCurrentState()
     {
+        isRunning = false;
         return this;
     }
 
-    public override void checkMove(InputAction.CallbackContext context)
+    private void FixedUpdate()
     {
-        
+
     }
 
-    public override void checkAttack(InputAction.CallbackContext context)
+    public override void checkInput(InputAction.CallbackContext context)
     {
-        
+        Debug.Log(context.action.name);
+
+
+        if (input_string.Count == 3)
+        {
+            input_string.Remove(0);
+        }
     }
 }

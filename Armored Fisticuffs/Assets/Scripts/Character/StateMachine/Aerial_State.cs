@@ -6,29 +6,33 @@ using UnityEngine.InputSystem;
 public class Aerial_State : State
 {
     private Grounded_State Grounded_;
-    private InputAction CharMove;
+    private Rigidbody Rigidbody_;
+    private bool isRunning;
 
     private void Start()
     {
         Grounded_ = GetComponent<Grounded_State>();
-        CharMove = GetComponent<InputAction>();
+        Rigidbody_ = GetComponent<Rigidbody>();
+        isRunning = false;
     }
     public override State ChangeState()
     {
+        isRunning = false;
         return Grounded_;
     }
 
     public override State RunCurrentState()
     {
+        isRunning = true;
         return this;
     }
 
-    public override void checkMove(InputAction.CallbackContext context)
+    private void FixedUpdate()
     {
         
     }
 
-    public override void checkAttack(InputAction.CallbackContext context)
+    public override void checkInput(InputAction.CallbackContext context)
     {
         
     }

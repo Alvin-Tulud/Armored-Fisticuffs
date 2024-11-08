@@ -9,7 +9,5 @@ public abstract class State : MonoBehaviour
 
     public abstract State ChangeState();
 
-    public abstract void checkMove(InputAction.CallbackContext context);
-
-    public abstract void checkAttack(InputAction.CallbackContext context);
+    public abstract void checkInput(InputAction.CallbackContext context);
 }

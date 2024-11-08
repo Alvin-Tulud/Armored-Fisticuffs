@@ -24,9 +24,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack",
+                    "name": "Attack_Light",
                     "type": "Button",
                     "id": "019d19ed-76cb-4f26-be4c-00f845473c81",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack_Heavy",
+                    "type": "Button",
+                    "id": "bf8fcb77-ac14-4d62-a096-d091fad8e554",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -68,28 +77,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
-                    "id": "f9495a4e-6c63-4a8c-acf9-b393a8b07b34",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "5604ce25-e30e-4707-8683-783ce44fdcc7",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "left",
                     "id": "c17ce84f-2d25-4cdc-9cfa-9745a9386cda",
                     "path": "<Keyboard>/a",
@@ -123,28 +110,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
-                    "id": "5b167b0a-6a52-4a2f-87d6-cdd7e684d68a",
-                    "path": "<Joystick>/stick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "18211f60-5ed9-4cc7-b9e8-e19ce50497dc",
-                    "path": "<Joystick>/stick/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "left",
                     "id": "fe29ffb4-88bc-46d7-9665-b56e80c9e23e",
                     "path": "<Joystick>/stick/left",
@@ -173,18 +138,40 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "Attack_Light",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "05a888c9-7cd1-44fd-96c7-78e5b813dc51",
-                    "path": "<HID::PowerA NSW wired controller>/button2",
+                    "path": "<XInputController>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "Attack_Light",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5e396b08-9b01-4638-9058-53c9aed4c5b2",
+                    "path": "<Keyboard>/g",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Default",
+                    "action": "Attack_Heavy",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9463bb5e-daf6-4aa0-a5a6-7b09aff7b58a",
+                    "path": "<XInputController>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Default",
+                    "action": "Attack_Heavy",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
