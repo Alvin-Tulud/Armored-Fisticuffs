@@ -37,11 +37,21 @@ public class Grounded_State : State
 
     }
 
-    public override void checkInput(InputAction.CallbackContext context)
+    public void checkMove(InputAction.CallbackContext context)
     {
-        Debug.Log(context.action.name);
+        if (input_string.Count == 3)
+        {
+            input_string.Remove(0);
+        }
+    }
 
+    public void CheckJump(InputAction.CallbackContext context)
+    {
 
+    }
+
+    public void checkAttack(InputAction.CallbackContext context)
+    {
         if (input_string.Count == 3)
         {
             input_string.Remove(0);
