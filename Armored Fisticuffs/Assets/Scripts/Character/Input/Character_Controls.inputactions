@@ -67,7 +67,7 @@
                 },
                 {
                     "name": "WASD",
-                    "id": "f7652c55-713c-4dd3-a58d-8a1e56e2b953",
+                    "id": "746221ab-4e38-4691-bd5d-6e16f29b5c07",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -77,8 +77,30 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "up",
+                    "id": "2fdddd7a-0335-4421-afe7-d4e7b883cfbd",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "c3b6fc0b-d171-4b5d-86bf-544025a5ce6f",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "left",
-                    "id": "c17ce84f-2d25-4cdc-9cfa-9745a9386cda",
+                    "id": "ab79bee4-48f1-4486-95cb-f57c41ee86ae",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -89,7 +111,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "f224a989-651a-4392-941b-bbea265ed1ad",
+                    "id": "05107c79-d243-4f65-b2d9-db9bf4e86383",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
@@ -100,7 +122,7 @@
                 },
                 {
                     "name": "L-Stick",
-                    "id": "cb50d366-e4ff-437a-b246-18d17c70082e",
+                    "id": "2c4c4ea2-dac8-417b-b024-57da355fd435",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -110,9 +132,31 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "up",
+                    "id": "a49bfe21-fc8b-45b2-8539-64f144e5da9d",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "86933b75-3b6b-48e2-b7c4-dd7c8e18e7b5",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "left",
-                    "id": "fe29ffb4-88bc-46d7-9665-b56e80c9e23e",
-                    "path": "<Joystick>/stick/left",
+                    "id": "2b782e2e-a247-45ec-ba86-a6a30da9abc5",
+                    "path": "<Gamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -122,8 +166,8 @@
                 },
                 {
                     "name": "right",
-                    "id": "0cb98304-e343-4b12-93e7-e89cb7c4889c",
-                    "path": "<Joystick>/stick/right",
+                    "id": "5cfa46f7-f734-4fd6-9842-02d6eb8dc2a3",
+                    "path": "<Gamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

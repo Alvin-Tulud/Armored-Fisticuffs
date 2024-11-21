@@ -5,6 +5,6 @@ public enum inputs
     Down,
     Left,
     Right,
-    One,
-    Two,
+    Light,
+    Heavy,
 }

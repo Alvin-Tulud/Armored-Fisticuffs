@@ -144,7 +144,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224344594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
   m_Name: 
@@ -545,7 +545,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 531276719}
         m_TargetAssemblyTypeName: Grounded_State, Assembly-CSharp
-        m_MethodName: checkInput
+        m_MethodName: checkMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -557,7 +557,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 531276718}
         m_TargetAssemblyTypeName: Aerial_State, Assembly-CSharp
-        m_MethodName: checkInput
+        m_MethodName: checkMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -573,7 +573,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 531276719}
         m_TargetAssemblyTypeName: Grounded_State, Assembly-CSharp
-        m_MethodName: CheckJump
+        m_MethodName: checkJump
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -589,7 +589,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 531276719}
         m_TargetAssemblyTypeName: Grounded_State, Assembly-CSharp
-        m_MethodName: checkAttack
+        m_MethodName: checkLightAttack
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -600,12 +600,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 531276718}
-        m_TargetAssemblyTypeName: Grounded_State, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+        m_TargetAssemblyTypeName: Aerial_State, Assembly-CSharp
+        m_MethodName: checkLightAttack
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -614,7 +614,31 @@ MonoBehaviour:
     m_ActionId: 019d19ed-76cb-4f26-be4c-00f845473c81
     m_ActionName: 'Movement/Attack_Light[/Keyboard/f]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 531276719}
+        m_TargetAssemblyTypeName: Grounded_State, Assembly-CSharp
+        m_MethodName: checkHeavyAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 531276718}
+        m_TargetAssemblyTypeName: Aerial_State, Assembly-CSharp
+        m_MethodName: checkHeavyAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: bf8fcb77-ac14-4d62-a096-d091fad8e554
     m_ActionName: 'Movement/Attack_Heavy[/Keyboard/g]'
   - m_PersistentCalls:

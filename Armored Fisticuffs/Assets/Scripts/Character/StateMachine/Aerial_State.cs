@@ -36,19 +36,74 @@ public class Aerial_State : State
 
     public void checkMove(InputAction.CallbackContext context)
     {
-        
+        if (isRunning)
+        {
+            Vector2 temp_Vec = context.ReadValue<Vector2>();
+
+            //if horizontal input is greater than vertical
+            if (Mathf.Abs(temp_Vec.x) > Mathf.Abs(temp_Vec.y))
+            {
+                //if horizontal value is left or right
+                if (temp_Vec.x < 0)
+                {
+                    addString(inputs.Left);
+                }
+                else
+                {
+                    addString(inputs.Right);
+                }
+            }
+            //if vertical input is greater than horizontal
+            else
+            {
+                //if vertical value is up or down
+                if (temp_Vec.y < 0)
+                {
+                    addString(inputs.Down);
+                }
+                else
+                {
+                    addString(inputs.Up);
+                }
+            }
+        }
     }
 
-    public void checkAttack(InputAction.CallbackContext context)
+    public void checkLightAttack(InputAction.CallbackContext context)
     {
-
+        if (isRunning)
+        {
+            if (context.ReadValue<bool>())
+            {
+                addString(inputs.Light);
+            }
+        }
     }
 
-    private void checkString()
+    public void checkHeavyAttack(InputAction.CallbackContext context)
     {
+        if (isRunning)
+        {
+            if (context.ReadValue<bool>())
+            {
+                addString(inputs.Heavy);
+            }
+        }
+    }
+
+    private void addString(inputs inputtype)
+    {
+        Debug.Log("Adding input");
         if (input_string.Count == 3)
         {
             input_string.Remove(0);
         }
+
+        input_string.Add(inputtype);
+    }
+
+    private void checkString()
+    {
+        
     }
 }
