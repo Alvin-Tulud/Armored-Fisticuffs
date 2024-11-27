@@ -3,8 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(CharacterController))]
 public class Grounded_State : State
 {
+    [SerializeField]
+    private float playerSpeed = 2.0f;
+    [SerializeField]
+    private float jumpHeight = 1.0f;
+    [SerializeField]
+    private float gravityValue = -9.81f;
+
+    private Vector3 playerVelocity;
+    private bool groundedPlayer;
+
+    private CharacterController controller;
     private Aerial_State Aerial_;
     private Rigidbody Rigidbody_;
     private bool isRunning;
@@ -13,6 +25,7 @@ public class Grounded_State : State
 
     private void Start()
     {
+        controller = GetComponent<CharacterController>();
         Aerial_ = GetComponent<Aerial_State>();
         Rigidbody_ = GetComponent<Rigidbody>();
         isRunning = false;
@@ -34,22 +47,7 @@ public class Grounded_State : State
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Debug.Log("up");
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            Debug.Log("down");
-        }
-        else if (Input.GetKeyDown(KeyCode.A))
-        {
-            Debug.Log("left");
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            Debug.Log("right");
-        }
+        
     }
 
     private void FixedUpdate()
@@ -59,7 +57,7 @@ public class Grounded_State : State
 
     public void checkMove(InputAction.CallbackContext context)
     {
-        Debug.Log("input");
+        //Debug.Log("input");
         if (isRunning)
         {
             Vector2 temp_Vec = context.ReadValue<Vector2>();
@@ -73,7 +71,7 @@ public class Grounded_State : State
                     Debug.Log("input left");
                     addString(inputs.Left);
                 }
-                else
+                else if (temp_Vec.x > 0)
                 {
                     Debug.Log("input right");
                     addString(inputs.Right);
@@ -88,7 +86,7 @@ public class Grounded_State : State
                     Debug.Log("input down");
                     addString(inputs.Down);
                 }
-                else
+                else if (temp_Vec.y > 0)
                 {
                     Debug.Log("input up");
                     addString(inputs.Up);
@@ -99,10 +97,10 @@ public class Grounded_State : State
 
     public void checkLightAttack(InputAction.CallbackContext context)
     {
-        Debug.Log("input");
+        //Debug.Log("input");
         if (isRunning)
         {
-            if (context.ReadValue<bool>())
+            if (context.action.triggered)
             {
                 Debug.Log("input light");
                 addString(inputs.Light);
@@ -112,10 +110,10 @@ public class Grounded_State : State
 
     public void checkHeavyAttack(InputAction.CallbackContext context)
     {
-        Debug.Log("input");
+        //Debug.Log("input");
         if (isRunning)
         {
-            if (context.ReadValue<bool>())
+            if (context.action.triggered)
             {
                 Debug.Log("input heavy");
                 addString(inputs.Heavy);
@@ -125,12 +123,19 @@ public class Grounded_State : State
 
     public void checkJump(InputAction.CallbackContext context)
     {
-        Debug.Log("input");
+        //Debug.Log("input");
+        if (isRunning)
+        {
+            if (context.action.triggered)
+            {
+                Debug.Log("input jump");
+            }
+        }
     }
 
     private void addString(inputs inputtype)
     {
-        Debug.Log("Adding input");
+        //Debug.Log("Adding input");
         if (input_string.Count == 3)
         {
             input_string.Remove(0);

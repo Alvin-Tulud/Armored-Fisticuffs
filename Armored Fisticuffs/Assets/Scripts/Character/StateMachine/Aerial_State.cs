@@ -3,8 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(CharacterController))]
 public class Aerial_State : State
 {
+    [SerializeField]
+    private float playerSpeed = 2.0f;
+    [SerializeField]
+    private float jumpHeight = 1.0f;
+    [SerializeField]
+    private float gravityValue = -9.81f;
+
+    private Vector3 playerVelocity;
+    private bool groundedPlayer;
+
+    private CharacterController controller;
     private Grounded_State Grounded_;
     private Rigidbody Rigidbody_;
     private bool isRunning;
@@ -13,6 +25,7 @@ public class Aerial_State : State
 
     private void Start()
     {
+        controller = GetComponent<CharacterController>();
         Grounded_ = GetComponent<Grounded_State>();
         Rigidbody_ = GetComponent<Rigidbody>();
         isRunning = false;
@@ -30,6 +43,11 @@ public class Aerial_State : State
     }
 
     private void FixedUpdate()
+    {
+        
+    }
+
+    private void Update()
     {
         
     }
@@ -73,7 +91,7 @@ public class Aerial_State : State
     {
         if (isRunning)
         {
-            if (context.ReadValue<bool>())
+            if (context.action.triggered)
             {
                 addString(inputs.Light);
             }
@@ -84,7 +102,7 @@ public class Aerial_State : State
     {
         if (isRunning)
         {
-            if (context.ReadValue<bool>())
+            if (context.action.triggered)
             {
                 addString(inputs.Heavy);
             }
