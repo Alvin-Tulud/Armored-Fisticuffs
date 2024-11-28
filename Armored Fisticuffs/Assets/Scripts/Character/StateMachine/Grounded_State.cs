@@ -2,35 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 
-[RequireComponent(typeof(CharacterController))]
 public class Grounded_State : State
 {
     [SerializeField]
     private float playerSpeed = 2.0f;
     [SerializeField]
-    private float jumpHeight = 1.0f;
+    private float jumpHeight = 3.0f;
     [SerializeField]
     private float gravityValue = -9.81f;
 
     private Vector3 playerVelocity;
     private bool groundedPlayer;
 
-    private CharacterController controller;
     private Aerial_State Aerial_;
-    private Rigidbody Rigidbody_;
+    private Rigidbody2D Rigidbody_;
     private bool isRunning;
 
     private List<inputs> input_string;
 
     private void Start()
     {
-        controller = GetComponent<CharacterController>();
         Aerial_ = GetComponent<Aerial_State>();
-        Rigidbody_ = GetComponent<Rigidbody>();
+        Rigidbody_ = GetComponent<Rigidbody2D>();
         isRunning = false;
 
-        input_string = new List<inputs>(3);
+        input_string = new List<inputs>(2);
     }
 
     public override State ChangeState()
@@ -47,7 +45,14 @@ public class Grounded_State : State
 
     private void Update()
     {
-        
+        groundedPlayer = IsGrounded();
+        if (groundedPlayer && playerVelocity.y < 0)
+        {
+            playerVelocity.y = 0f;
+        }
+
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        Rigidbody_.velocity = playerVelocity * Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -129,23 +134,54 @@ public class Grounded_State : State
             if (context.action.triggered)
             {
                 Debug.Log("input jump");
+                jumpChar();
             }
         }
     }
 
     private void addString(inputs inputtype)
     {
-        //Debug.Log("Adding input");
-        if (input_string.Count == 3)
+        if (inputtype < inputs.Light)
         {
+            moveChar();
+        }
+
+        //Debug.Log("Adding input");
+        if (input_string.Count == 2)
+        {
+            checkString();
+
             input_string.Remove(0);
         }
 
         input_string.Add(inputtype);
     }
 
-    private void checkString()
+    private bool IsGrounded()
+    {
+        return Physics2D.Raycast(transform.position, Vector3.down, 0.1f);
+    }
+
+    private void jumpChar()
+    {
+        if (IsGrounded())
+        {
+            playerVelocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
+
+            Debug.Log(playerVelocity.y);
+        }
+    }
+
+    private void moveChar()
     {
 
+    }
+
+    private void checkString()
+    {
+        if (input_string[0] < inputs.Light && input_string[1] >= inputs.Light)
+        {
+
+        }
     }
 }

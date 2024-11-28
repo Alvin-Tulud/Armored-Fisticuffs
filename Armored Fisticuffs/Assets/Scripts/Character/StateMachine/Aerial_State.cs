@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(CharacterController))]
 public class Aerial_State : State
 {
     [SerializeField]
@@ -16,18 +15,16 @@ public class Aerial_State : State
     private Vector3 playerVelocity;
     private bool groundedPlayer;
 
-    private CharacterController controller;
     private Grounded_State Grounded_;
-    private Rigidbody Rigidbody_;
+    private Rigidbody2D Rigidbody_;
     private bool isRunning;
 
     private List<inputs> input_string;
 
     private void Start()
     {
-        controller = GetComponent<CharacterController>();
         Grounded_ = GetComponent<Grounded_State>();
-        Rigidbody_ = GetComponent<Rigidbody>();
+        Rigidbody_ = GetComponent<Rigidbody2D>();
         isRunning = false;
     }
     public override State ChangeState()
