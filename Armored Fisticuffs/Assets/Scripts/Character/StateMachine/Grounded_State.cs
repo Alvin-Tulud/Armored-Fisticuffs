@@ -12,9 +12,10 @@ public class Grounded_State : State
     private float jumpHeight = 3.0f;
     [SerializeField]
     private float gravityValue = -9.81f;
+    [SerializeField]
+    private LayerMask ignorePlayer;
 
     private Vector3 playerVelocity;
-    private bool groundedPlayer;
 
     private Aerial_State Aerial_;
     private Rigidbody2D Rigidbody_;
@@ -39,20 +40,23 @@ public class Grounded_State : State
 
     public override State RunCurrentState()
     {
-        isRunning = true;
-        return this;
-    }
+        if (!IsGrounded())
+        {
+            Debug.Log("in air");
+            isRunning = false;
+            return Aerial_;
+        }
 
-    private void Update()
-    {
-        groundedPlayer = IsGrounded();
-        if (groundedPlayer && playerVelocity.y < 0)
+        if (IsGrounded() && playerVelocity.y < 0)
         {
             playerVelocity.y = 0f;
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         Rigidbody_.velocity = playerVelocity * Time.deltaTime;
+
+        isRunning = true;
+        return this;
     }
 
     private void FixedUpdate()
@@ -133,7 +137,7 @@ public class Grounded_State : State
         {
             if (context.action.triggered)
             {
-                Debug.Log("input jump");
+                //Debug.Log("input jump");
                 jumpChar();
             }
         }
@@ -143,7 +147,7 @@ public class Grounded_State : State
     {
         if (inputtype < inputs.Light)
         {
-            moveChar();
+            moveChar(inputtype);
         }
 
         //Debug.Log("Adding input");
@@ -159,22 +163,29 @@ public class Grounded_State : State
 
     private bool IsGrounded()
     {
-        return Physics2D.Raycast(transform.position, Vector3.down, 0.1f);
+        Debug.DrawLine(transform.position, transform.position + (Vector3.down * 0.55f), Color.blue, 1);
+        return Physics2D.Raycast(transform.position, Vector3.down, 0.55f, ignorePlayer);
     }
 
     private void jumpChar()
     {
         if (IsGrounded())
         {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
-
-            Debug.Log(playerVelocity.y);
+            //Debug.Log("jumped");
+            Rigidbody_.AddForceY(jumpHeight, ForceMode2D.Force);
         }
     }
 
-    private void moveChar()
+    private void moveChar(inputs inputtype)
     {
-
+        if (inputtype == inputs.Left)
+        {
+            playerVelocity.x -= playerSpeed;
+        }
+        else if (inputtype == inputs.Right)
+        {
+            playerVelocity.x += playerSpeed;
+        }
     }
 
     private void checkString()

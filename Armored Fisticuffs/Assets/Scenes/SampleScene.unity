@@ -428,28 +428,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 240290169288166703, guid: e610dd4d56099574e8919ca88f67a6e3, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1178905426562290378, guid: e610dd4d56099574e8919ca88f67a6e3, type: 3}
-      propertyPath: m_CompositeOperation
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776576127311550479, guid: e610dd4d56099574e8919ca88f67a6e3, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1776576127311550479, guid: e610dd4d56099574e8919ca88f67a6e3, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2739185560646539688, guid: e610dd4d56099574e8919ca88f67a6e3, type: 3}
-      propertyPath: m_Height
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3923324133269351624, guid: e610dd4d56099574e8919ca88f67a6e3, type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: jumpHeight
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4978008287939343680, guid: e610dd4d56099574e8919ca88f67a6e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -489,10 +469,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4978008287939343680, guid: e610dd4d56099574e8919ca88f67a6e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7730921716137788573, guid: e610dd4d56099574e8919ca88f67a6e3, type: 3}
-      propertyPath: m_CompositeOperation
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8169220162678180197, guid: e610dd4d56099574e8919ca88f67a6e3, type: 3}

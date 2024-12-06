@@ -8,9 +8,9 @@ public class Aerial_State : State
     [SerializeField]
     private float playerSpeed = 2.0f;
     [SerializeField]
-    private float jumpHeight = 1.0f;
-    [SerializeField]
     private float gravityValue = -9.81f;
+    [SerializeField]
+    private LayerMask ignorePlayer;
 
     private Vector3 playerVelocity;
     private bool groundedPlayer;
@@ -35,16 +35,18 @@ public class Aerial_State : State
 
     public override State RunCurrentState()
     {
+        if (IsGrounded())
+        {
+            Debug.Log("on ground");
+            isRunning = false;
+            return Grounded_;
+        }
+
         isRunning = true;
         return this;
     }
 
     private void FixedUpdate()
-    {
-        
-    }
-
-    private void Update()
     {
         
     }
@@ -106,10 +108,16 @@ public class Aerial_State : State
         }
     }
 
+    private bool IsGrounded()
+    {
+        Debug.DrawLine(transform.position, transform.position + (Vector3.down * 0.55f), Color.red, 1);
+        return Physics2D.Raycast(transform.position, Vector3.down, 0.55f, ignorePlayer);
+    }
+
     private void addString(inputs inputtype)
     {
         Debug.Log("Adding input");
-        if (input_string.Count == 3)
+        if (input_string.Count == 2)
         {
             input_string.Remove(0);
         }
