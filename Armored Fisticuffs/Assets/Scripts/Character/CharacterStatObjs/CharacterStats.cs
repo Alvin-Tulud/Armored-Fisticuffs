@@ -7,7 +7,6 @@ public class CharacterStats : ScriptableObject
 {
     [SerializeField] Basic_Settings Basic_Info;
     [SerializeField] Grounded_Moves_Settings Grounded_Moves;
-    [SerializeField] Aerial_Moves_Settings Aerial_Moves;
 
     [System.Serializable]
     public struct Basic_Settings
@@ -21,9 +20,8 @@ public class CharacterStats : ScriptableObject
     public struct Grounded_Moves_Settings
     {
         [SerializeField] Grounded_Jab Jab;
-        [SerializeField] Grounded_Heavy_Jab Heavy_Jab;
         [SerializeField] Grounded_SideTilt SideTilt;
-        [SerializeField] Grounded_Heavy_SildeTilt Heavy_SildeTilt;
+        [SerializeField] Grounded_Heavy_SideTilt Heavy_SildeTilt;
         [SerializeField] Grounded_DownTilt DownTilt;
         [SerializeField] Grounded_Heavy_Down_Tilt Heavy_Down_Tilt;
         [SerializeField] Grounded_UpTilt UpTilt;
@@ -33,6 +31,7 @@ public class CharacterStats : ScriptableObject
         [System.Serializable]
         public struct Grounded_Jab
         {
+            public AnimationClip Hit_Anim;
             public int Damage;
             public Vector2 Hit_Size;
             public Vector3 Hit_Location;
@@ -40,29 +39,12 @@ public class CharacterStats : ScriptableObject
             public Vector3 Hurt_Location;
             public Vector2 Launch_Angle;
             public float Launch_Magnitude;
-            public int Frames_StartUp;
-            public int Frames_Active;
-            public int Frames_Recovery;
-        }
-
-        [System.Serializable]
-        public struct Grounded_Heavy_Jab
-        {
-            public int Damage;
-            public Vector2 Hit_Size;
-            public Vector3 Hit_Location;
-            public Vector2 Hurt_Size;
-            public Vector3 Hurt_Location;
-            public Vector2 Launch_Angle;
-            public float Launch_Magnitude;
-            public int Frames_StartUp;
-            public int Frames_Active;
-            public int Frames_Recovery;
         }
 
         [System.Serializable]
         public struct Grounded_SideTilt
         {
+            public AnimationClip Hit_Anim;
             public int Damage;
             public Vector2 Hit_Size;
             public Vector3 Hit_Location;
@@ -70,14 +52,12 @@ public class CharacterStats : ScriptableObject
             public Vector3 Hurt_Location;
             public Vector2 Launch_Angle;
             public float Launch_Magnitude;
-            public int Frames_StartUp;
-            public int Frames_Active;
-            public int Frames_Recovery;
         }
 
         [System.Serializable]
-        public struct Grounded_Heavy_SildeTilt
+        public struct Grounded_Heavy_SideTilt
         {
+            public AnimationClip Hit_Anim;
             public int Damage;
             public Vector2 Hit_Size;
             public Vector3 Hit_Location;
@@ -85,14 +65,12 @@ public class CharacterStats : ScriptableObject
             public Vector3 Hurt_Location;
             public Vector2 Launch_Angle;
             public float Launch_Magnitude;
-            public int Frames_StartUp;
-            public int Frames_Active;
-            public int Frames_Recovery;
         }
 
         [System.Serializable]
         public struct Grounded_DownTilt
         {
+            public AnimationClip Hit_Anim;
             public int Damage;
             public Vector2 Hit_Size;
             public Vector3 Hit_Location;
@@ -100,14 +78,12 @@ public class CharacterStats : ScriptableObject
             public Vector3 Hurt_Location;
             public Vector2 Launch_Angle;
             public float Launch_Magnitude;
-            public int Frames_StartUp;
-            public int Frames_Active;
-            public int Frames_Recovery;
         }
 
         [System.Serializable]
         public struct Grounded_Heavy_Down_Tilt
         {
+            public AnimationClip Hit_Anim;
             public int Damage;
             public Vector2 Hit_Size;
             public Vector3 Hit_Location;
@@ -115,14 +91,12 @@ public class CharacterStats : ScriptableObject
             public Vector3 Hurt_Location;
             public Vector2 Launch_Angle;
             public float Launch_Magnitude;
-            public int Frames_StartUp;
-            public int Frames_Active;
-            public int Frames_Recovery;
         }
 
         [System.Serializable]
         public struct Grounded_UpTilt
         {
+            public AnimationClip Hit_Anim;
             public int Damage;
             public Vector2 Hit_Size;
             public Vector3 Hit_Location;
@@ -130,14 +104,12 @@ public class CharacterStats : ScriptableObject
             public Vector3 Hurt_Location;
             public Vector2 Launch_Angle;
             public float Launch_Magnitude;
-            public int Frames_StartUp;
-            public int Frames_Active;
-            public int Frames_Recovery;
         }
 
         [System.Serializable]
         public struct Grounded_Heavy_Up_Tilt
         {
+            public AnimationClip Hit_Anim;
             public int Damage;
             public Vector2 Hit_Size;
             public Vector3 Hit_Location;
@@ -145,79 +117,6 @@ public class CharacterStats : ScriptableObject
             public Vector3 Hurt_Location;
             public Vector2 Launch_Angle;
             public float Launch_Magnitude;
-            public int Frames_StartUp;
-            public int Frames_Active;
-            public int Frames_Recovery;
-        }
-    }
-
-    [System.Serializable]
-    public struct Aerial_Moves_Settings
-    {
-        [SerializeField] Aerial_Jab Jab;
-        [SerializeField] Aerial_SideTilt SideTilt;
-        [SerializeField] Aerial_DownTilt DownTilt;
-        [SerializeField] Aerial_UpTilt UpTilt;
-
-
-        [System.Serializable]
-        public struct Aerial_Jab
-        {
-            public int Damage;
-            public Vector2 Hit_Size;
-            public Vector3 Hit_Location;
-            public Vector2 Hurt_Size;
-            public Vector3 Hurt_Location;
-            public Vector2 Launch_Angle;
-            public float Launch_Magnitude;
-            public int Frames_StartUp;
-            public int Frames_Active;
-            public int Frames_Recovery;
-        }
-
-        [System.Serializable]
-        public struct Aerial_SideTilt
-        {
-            public int Damage;
-            public Vector2 Hit_Size;
-            public Vector3 Hit_Location;
-            public Vector2 Hurt_Size;
-            public Vector3 Hurt_Location;
-            public Vector2 Launch_Angle;
-            public float Launch_Magnitude;
-            public int Frames_StartUp;
-            public int Frames_Active;
-            public int Frames_Recovery;
-        }
-
-        [System.Serializable]
-        public struct Aerial_DownTilt
-        {
-            public int Damage;
-            public Vector2 Hit_Size;
-            public Vector3 Hit_Location;
-            public Vector2 Hurt_Size;
-            public Vector3 Hurt_Location;
-            public Vector2 Launch_Angle;
-            public float Launch_Magnitude;
-            public int Frames_StartUp;
-            public int Frames_Active;
-            public int Frames_Recovery;
-        }
-
-        [System.Serializable]
-        public struct Aerial_UpTilt
-        {
-            public int Damage;
-            public Vector2 Hit_Size;
-            public Vector3 Hit_Location;
-            public Vector2 Hurt_Size;
-            public Vector3 Hurt_Location;
-            public Vector2 Launch_Angle;
-            public float Launch_Magnitude;
-            public int Frames_StartUp;
-            public int Frames_Active;
-            public int Frames_Recovery;
         }
     }
 }

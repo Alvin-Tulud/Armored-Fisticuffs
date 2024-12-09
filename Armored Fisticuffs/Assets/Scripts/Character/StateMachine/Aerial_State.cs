@@ -8,12 +8,11 @@ public class Aerial_State : State
     [SerializeField]
     private float playerSpeed = 2.0f;
     [SerializeField]
-    private float gravityValue = -9.81f;
-    [SerializeField]
     private LayerMask ignorePlayer;
-
     private Vector3 playerVelocity;
     private bool groundedPlayer;
+    private Vector2 temp_Vec;
+    private bool holding_Down_Move;
 
     private Grounded_State Grounded_;
     private Rigidbody2D Rigidbody_;
@@ -23,9 +22,14 @@ public class Aerial_State : State
 
     private void Start()
     {
+        temp_Vec = Vector2.zero;
+        holding_Down_Move = false;
+
         Grounded_ = GetComponent<Grounded_State>();
         Rigidbody_ = GetComponent<Rigidbody2D>();
         isRunning = false;
+
+        input_string = new List<inputs>(2);
     }
     public override State ChangeState()
     {
@@ -39,6 +43,7 @@ public class Aerial_State : State
         {
             Debug.Log("on ground");
             isRunning = false;
+            holding_Down_Move = false;
             return Grounded_;
         }
 
@@ -48,14 +53,40 @@ public class Aerial_State : State
 
     private void FixedUpdate()
     {
-        
+        if (isRunning && holding_Down_Move)
+        {
+            if (Mathf.Abs(temp_Vec.x) > Mathf.Abs(temp_Vec.y))
+            {
+                //if horizontal value is left or right
+                if (temp_Vec.x < 0)
+                {
+                    Rigidbody_.AddForceX(-playerSpeed, ForceMode2D.Force);
+                }
+                else if (temp_Vec.x > 0)
+                {
+                    Rigidbody_.AddForceX(playerSpeed, ForceMode2D.Force);
+                }
+            }
+        }
     }
 
     public void checkMove(InputAction.CallbackContext context)
     {
         if (isRunning)
         {
-            Vector2 temp_Vec = context.ReadValue<Vector2>();
+            //check if input is the same as before
+            //if so hold value that it is moving
+            if (temp_Vec != context.ReadValue<Vector2>())
+            {
+                temp_Vec = context.ReadValue<Vector2>();
+
+                holding_Down_Move = context.started;
+            }
+            //wait until input is over
+            else if (context.canceled)
+            {
+                holding_Down_Move = false;
+            }
 
             //if horizontal input is greater than vertical
             if (Mathf.Abs(temp_Vec.x) > Mathf.Abs(temp_Vec.y))
@@ -78,7 +109,7 @@ public class Aerial_State : State
                 {
                     addString(inputs.Down);
                 }
-                else
+                else if (temp_Vec.y > 0)
                 {
                     addString(inputs.Up);
                 }

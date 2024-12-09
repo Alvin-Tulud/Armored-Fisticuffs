@@ -1,0 +1,1085 @@
+fileFormatVersion: 2
+guid: 1994503edc857dc4080b2b686baa7479
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8998383096028656359
+    second: armoredfisticuss-wireframes_0
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_0
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 2642
+        width: 256
+        height: 434
+      alignment: 9
+      pivot: {x: 0.49999988, y: 0.3905682}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2689029f83b624cb35956db5d33e64
+      internalID: 1027104382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_1
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 2638
+        width: 267
+        height: 435
+      alignment: 9
+      pivot: {x: 0.23786452, y: 0.3965663}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60439fe4f896b44f842e151ad5568a3
+      internalID: -2040938617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_2
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c84fc14e187914a8526ae7457c74e7
+      internalID: -1360635068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_3
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c375067cda3bc4c83d5b8cf973f612
+      internalID: 645001634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_4
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2588
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5beff848d447940488677adbbb9d90d9
+      internalID: -1370515761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_5
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f549d17c5dd86b4fbe4c2e30b58f5e2
+      internalID: 1438346944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_6
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e2f4754b5a3d7488f9298dd3167263
+      internalID: -161954170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_7
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db10b1e7eacf2734e83f0beb01ddcfd6
+      internalID: 2136422417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_8
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac508dc1f06b65f44b18b3b9fcab384e
+      internalID: -647382410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_9
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 2192
+        width: 256
+        height: 446
+      alignment: 9
+      pivot: {x: 0.4902358, y: 0.38230342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ab1137773d23845b03f6d7431bd2de
+      internalID: 2102298960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_10
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 2207
+        width: 256
+        height: 423
+      alignment: 9
+      pivot: {x: 0.5086012, y: 0.3854819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca6e01e66723fd408dbf482084e42e2
+      internalID: -2015524737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_11
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 2207
+        width: 334
+        height: 433
+      alignment: 9
+      pivot: {x: 0.4039705, y: 0.36703187}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd40387883477a54db81c6d457badcf6
+      internalID: 747901407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_12
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05308253ab3222443a3b0452194bc2f5
+      internalID: -163081956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_13
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f23eae1f43d79c4cbc309824262df8c
+      internalID: 1561273974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_14
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b4f558ababcf94797e992da1167f39
+      internalID: -594300668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_15
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07385004bc81862419cb8a3088b7ce8e
+      internalID: 524996318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_16
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1754
+        width: 317
+        height: 374
+      alignment: 9
+      pivot: {x: 0.4202074, y: 0.41936767}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0957d5cbaa036943b97df838d4ad538
+      internalID: -1874235584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_17
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e88f0428c9dc64ca871141e08faa5b
+      internalID: 104760451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_18
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01923c95075a5ab45a13e3407fb9bf45
+      internalID: 1518071990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_19
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc448fc4dea5174aae066945ce79fdb
+      internalID: 387057325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_20
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f2ac189f97fda48bf6ef43cee22ec8
+      internalID: 268976293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_21
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab0e7b85b1b5f7448f86aee43dd3b42
+      internalID: 1641462200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_22
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 1316
+        width: 256
+        height: 379
+      alignment: 9
+      pivot: {x: 0.3978107, y: 0.39762455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e80992df58e22e4c8967f1dc3fdddbc
+      internalID: -1045500942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_23
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d17cbcb63d4aae4a9b8c6c7491b030a
+      internalID: 225187946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_24
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f42d1ed24804840a98c60a4af2aba4
+      internalID: 427022117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_25
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4401ad0e74cdd4699df705484da7eb
+      internalID: 55519024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_26
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d498593a5b8f1c48b8bccbb1abf18b6
+      internalID: -786179525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_27
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8d6bc3958a25d4b9d796808db7cd3b
+      internalID: -1600149995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_28
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 873
+        width: 215
+        height: 436
+      alignment: 9
+      pivot: {x: 0.41828415, y: 0.41192514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69e02d0d064b7448b0e4d3baa8a1cc4
+      internalID: -1137885295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_29
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 882
+        width: 270
+        height: 425
+      alignment: 9
+      pivot: {x: 0.3124973, y: 0.43308336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f9298f532403d41827f4771d7c4b72
+      internalID: 210003813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_30
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0398b4e506be8794a946a02b8a3bd0d0
+      internalID: 663484778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_31
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9052a43a58f534395772b58e1468e6
+      internalID: 1576154237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_32
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 455
+        width: 267
+        height: 401
+      alignment: 9
+      pivot: {x: 0.38934943, y: 0.38939637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc4b7f269ccbe34caa201bfa0e7504b
+      internalID: -500057648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_33
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b3f7ab4cf8d744f8e0b6829c13f8a7
+      internalID: 723554282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_34
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a468f108fd1e0e34193ae506e5d5868d
+      internalID: -825520618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_35
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e366ad419c1986a4cb28150e3818856a
+      internalID: 2138802832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_36
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafc9dbae87ea594ea5e3436d3e59c2c
+      internalID: -2139950182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_37
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 0
+        width: 256
+        height: 412
+      alignment: 9
+      pivot: {x: 0.45917845, y: 0.44819155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e1474cd2aa91a45ab1b2ca87c6d594
+      internalID: -352756638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_38
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 256
+        height: 409
+      alignment: 9
+      pivot: {x: 0.25780654, y: 0.4700975}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2078fdc7dfa27b04ebf0e7b72de1467f
+      internalID: -1108225645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_39
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c50a3426d89854e99a0cde4001de4a
+      internalID: -964181983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_40
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856081fa6c43e8c438e071b395829ed1
+      internalID: -1030346952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_41
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4741800f885a7c642906b196e2b819bc
+      internalID: -268196552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armoredfisticuss-wireframes_42
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 2598
+        width: 256
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ea5410465f47040b1127eeec541a3b
+      internalID: -1610030096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b7c7864afdb1f07439a4e4b14b9add80
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      armoredfisticuss-wireframes_0: 1027104382
+      armoredfisticuss-wireframes_1: -2040938617
+      armoredfisticuss-wireframes_10: -2015524737
+      armoredfisticuss-wireframes_11: 747901407
+      armoredfisticuss-wireframes_12: -163081956
+      armoredfisticuss-wireframes_13: 1561273974
+      armoredfisticuss-wireframes_14: -594300668
+      armoredfisticuss-wireframes_15: 524996318
+      armoredfisticuss-wireframes_16: -1874235584
+      armoredfisticuss-wireframes_17: 104760451
+      armoredfisticuss-wireframes_18: 1518071990
+      armoredfisticuss-wireframes_19: 387057325
+      armoredfisticuss-wireframes_2: -1360635068
+      armoredfisticuss-wireframes_20: 268976293
+      armoredfisticuss-wireframes_21: 1641462200
+      armoredfisticuss-wireframes_22: -1045500942
+      armoredfisticuss-wireframes_23: 225187946
+      armoredfisticuss-wireframes_24: 427022117
+      armoredfisticuss-wireframes_25: 55519024
+      armoredfisticuss-wireframes_26: -786179525
+      armoredfisticuss-wireframes_27: -1600149995
+      armoredfisticuss-wireframes_28: -1137885295
+      armoredfisticuss-wireframes_29: 210003813
+      armoredfisticuss-wireframes_3: 645001634
+      armoredfisticuss-wireframes_30: 663484778
+      armoredfisticuss-wireframes_31: 1576154237
+      armoredfisticuss-wireframes_32: -500057648
+      armoredfisticuss-wireframes_33: 723554282
+      armoredfisticuss-wireframes_34: -825520618
+      armoredfisticuss-wireframes_35: 2138802832
+      armoredfisticuss-wireframes_36: -2139950182
+      armoredfisticuss-wireframes_37: -352756638
+      armoredfisticuss-wireframes_38: -1108225645
+      armoredfisticuss-wireframes_39: -964181983
+      armoredfisticuss-wireframes_4: -1370515761
+      armoredfisticuss-wireframes_40: -1030346952
+      armoredfisticuss-wireframes_41: -268196552
+      armoredfisticuss-wireframes_42: -1610030096
+      armoredfisticuss-wireframes_5: 1438346944
+      armoredfisticuss-wireframes_6: -161954170
+      armoredfisticuss-wireframes_7: 2136422417
+      armoredfisticuss-wireframes_8: -647382410
+      armoredfisticuss-wireframes_9: 2102298960
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

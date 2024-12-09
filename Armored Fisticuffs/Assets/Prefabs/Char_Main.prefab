@@ -126,7 +126,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4851220680336588243}
   - component: {fileID: 8053416389232853215}
-  - component: {fileID: 4947247626938070650}
+  - component: {fileID: 3935230139062060718}
+  - component: {fileID: 6878378471287602366}
   m_Layer: 6
   m_Name: Char_Visual
   m_TagString: Untagged
@@ -201,7 +202,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4947247626938070650
+--- !u!111 &3935230139062060718
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546181587228143805}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 5191b054af65dc44d8dbf1d128cfa4db, type: 2}
+  - {fileID: 7400000, guid: b03145497ddeed340bcfe2651eb7603b, type: 2}
+  - {fileID: 7400000, guid: 66f28a4aad6c9344b991323514391c40, type: 2}
+  - {fileID: 7400000, guid: d3e38466fb2becf4eb88866e45dade96, type: 2}
+  - {fileID: 7400000, guid: a24110d9b1aa3604baade353689b7590, type: 2}
+  - {fileID: 7400000, guid: e9144b1b4f3112545a10ca7002d26b49, type: 2}
+  - {fileID: 7400000, guid: 2d43bf9020913c546a9ad3988b244d83, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!95 &6878378471287602366
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -322,7 +346,7 @@ Transform:
   m_GameObject: {fileID: 8169220162678180197}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.83638537, y: -3.4850004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -343,9 +367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1cf890338139ef4b90562844bcdcedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 2
-  jumpHeight: 500
-  gravityValue: -9.81
+  playerSpeed: 200
+  jumpHeight: 400
   ignorePlayer:
     serializedVersion: 2
     m_Bits: 55
@@ -362,7 +385,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 2
-  gravityValue: -9.81
   ignorePlayer:
     serializedVersion: 2
     m_Bits: 55
@@ -491,7 +513,7 @@ MonoBehaviour:
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: UserInput
   m_DefaultActionMap: Movement
-  m_SplitScreenIndex: -1
+  m_SplitScreenIndex: 0
   m_Camera: {fileID: 0}
 --- !u!50 &1776576127311550479
 Rigidbody2D:

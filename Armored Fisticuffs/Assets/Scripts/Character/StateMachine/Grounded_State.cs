@@ -7,15 +7,17 @@ using UnityEngine.InputSystem.XR;
 public class Grounded_State : State
 {
     [SerializeField]
+    private CharacterStats cStats;
+    [SerializeField]
     private float playerSpeed = 2.0f;
     [SerializeField]
-    private float jumpHeight = 3.0f;
-    [SerializeField]
+    private float jumpHeight = 500f;
     private float gravityValue = -9.81f;
     [SerializeField]
     private LayerMask ignorePlayer;
-
     private Vector3 playerVelocity;
+    private Vector2 temp_Vec;
+    private bool holding_Down_Move;
 
     private Aerial_State Aerial_;
     private Rigidbody2D Rigidbody_;
@@ -25,6 +27,9 @@ public class Grounded_State : State
 
     private void Start()
     {
+        temp_Vec = Vector2.zero;
+        holding_Down_Move = false;
+
         Aerial_ = GetComponent<Aerial_State>();
         Rigidbody_ = GetComponent<Rigidbody2D>();
         isRunning = false;
@@ -44,6 +49,7 @@ public class Grounded_State : State
         {
             Debug.Log("in air");
             isRunning = false;
+            holding_Down_Move = false;
             return Aerial_;
         }
 
@@ -61,7 +67,21 @@ public class Grounded_State : State
 
     private void FixedUpdate()
     {
-
+        if (isRunning && holding_Down_Move)
+        {
+            if (Mathf.Abs(temp_Vec.x) > Mathf.Abs(temp_Vec.y))
+            {
+                //if horizontal value is left or right
+                if (temp_Vec.x < 0)
+                {
+                    Rigidbody_.AddForceX(-playerSpeed, ForceMode2D.Force);
+                }
+                else if (temp_Vec.x > 0)
+                {
+                    Rigidbody_.AddForceX(playerSpeed, ForceMode2D.Force);
+                }
+            }
+        }
     }
 
     public void checkMove(InputAction.CallbackContext context)
@@ -69,7 +89,21 @@ public class Grounded_State : State
         //Debug.Log("input");
         if (isRunning)
         {
-            Vector2 temp_Vec = context.ReadValue<Vector2>();
+            //check if input is the same as before
+                //if so hold value that it is moving
+            if (temp_Vec != context.ReadValue<Vector2>())
+            {
+                temp_Vec = context.ReadValue<Vector2>();
+
+                holding_Down_Move = context.started;
+            }
+                //wait until input is over
+            else if (context.canceled)
+            {
+                holding_Down_Move = false;
+            }
+
+
 
             //if horizontal input is greater than vertical
             if (Mathf.Abs(temp_Vec.x) > Mathf.Abs(temp_Vec.y))
@@ -77,12 +111,12 @@ public class Grounded_State : State
                 //if horizontal value is left or right
                 if (temp_Vec.x < 0)
                 {
-                    Debug.Log("input left");
+                    //Debug.Log("input left");
                     addString(inputs.Left);
                 }
                 else if (temp_Vec.x > 0)
                 {
-                    Debug.Log("input right");
+                    //Debug.Log("input right");
                     addString(inputs.Right);
                 }
             }
@@ -92,12 +126,12 @@ public class Grounded_State : State
                 //if vertical value is up or down
                 if (temp_Vec.y < 0)
                 {
-                    Debug.Log("input down");
+                    //Debug.Log("input down");
                     addString(inputs.Down);
                 }
                 else if (temp_Vec.y > 0)
                 {
-                    Debug.Log("input up");
+                    //Debug.Log("input up");
                     addString(inputs.Up);
                 }
             }
@@ -145,11 +179,6 @@ public class Grounded_State : State
 
     private void addString(inputs inputtype)
     {
-        if (inputtype < inputs.Light)
-        {
-            moveChar(inputtype);
-        }
-
         //Debug.Log("Adding input");
         if (input_string.Count == 2)
         {
@@ -173,18 +202,6 @@ public class Grounded_State : State
         {
             //Debug.Log("jumped");
             Rigidbody_.AddForceY(jumpHeight, ForceMode2D.Force);
-        }
-    }
-
-    private void moveChar(inputs inputtype)
-    {
-        if (inputtype == inputs.Left)
-        {
-            playerVelocity.x -= playerSpeed;
-        }
-        else if (inputtype == inputs.Right)
-        {
-            playerVelocity.x += playerSpeed;
         }
     }
 

@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28f3fd4cabe9364abaa936d385d6f33, type: 3}
+  m_Name: WireMan
+  m_EditorClassIdentifier: 
+  Basic_Info:
+    Character_Name: WireMan
+    Character_Health: 125
+    Character_Speed: 0
+  Grounded_Moves:
+    Jab:
+      Hit_Anim: {fileID: 7400000, guid: a24110d9b1aa3604baade353689b7590, type: 2}
+      Damage: 4
+      Hit_Size: {x: 0, y: 0}
+      Hit_Location: {x: 0, y: 0, z: 0}
+      Hurt_Size: {x: 0, y: 0}
+      Hurt_Location: {x: 0, y: 0, z: 0}
+      Launch_Angle: {x: 1, y: 0}
+      Launch_Magnitude: 0.25
+    SideTilt:
+      Hit_Anim: {fileID: 7400000, guid: d3e38466fb2becf4eb88866e45dade96, type: 2}
+      Damage: 12
+      Hit_Size: {x: 0, y: 0}
+      Hit_Location: {x: 0, y: 0, z: 0}
+      Hurt_Size: {x: 0, y: 0}
+      Hurt_Location: {x: 0, y: 0, z: 0}
+      Launch_Angle: {x: 1, y: 0.5}
+      Launch_Magnitude: 1
+    Heavy_SildeTilt:
+      Hit_Anim: {fileID: 7400000, guid: 66f28a4aad6c9344b991323514391c40, type: 2}
+      Damage: 25
+      Hit_Size: {x: 0, y: 0}
+      Hit_Location: {x: 0, y: 0, z: 0}
+      Hurt_Size: {x: 0, y: 0}
+      Hurt_Location: {x: 0, y: 0, z: 0}
+      Launch_Angle: {x: 1, y: 0}
+      Launch_Magnitude: 1
+    DownTilt:
+      Hit_Anim: {fileID: 7400000, guid: b03145497ddeed340bcfe2651eb7603b, type: 2}
+      Damage: 5
+      Hit_Size: {x: 0, y: 0}
+      Hit_Location: {x: 0, y: 0, z: 0}
+      Hurt_Size: {x: 0, y: 0}
+      Hurt_Location: {x: 0, y: 0, z: 0}
+      Launch_Angle: {x: 0.5, y: -0.5}
+      Launch_Magnitude: 0.25
+    Heavy_Down_Tilt:
+      Hit_Anim: {fileID: 7400000, guid: 5191b054af65dc44d8dbf1d128cfa4db, type: 2}
+      Damage: 18
+      Hit_Size: {x: 0, y: 0}
+      Hit_Location: {x: 0, y: 0, z: 0}
+      Hurt_Size: {x: 0, y: 0}
+      Hurt_Location: {x: 0, y: 0, z: 0}
+      Launch_Angle: {x: 1, y: -2}
+      Launch_Magnitude: 2
+    UpTilt:
+      Hit_Anim: {fileID: 7400000, guid: 2d43bf9020913c546a9ad3988b244d83, type: 2}
+      Damage: 9
+      Hit_Size: {x: 0, y: 0}
+      Hit_Location: {x: 0, y: 0, z: 0}
+      Hurt_Size: {x: 0, y: 0}
+      Hurt_Location: {x: 0, y: 0, z: 0}
+      Launch_Angle: {x: 0.25, y: 1}
+      Launch_Magnitude: 1
+    Heavy_Up_Tilt:
+      Hit_Anim: {fileID: 7400000, guid: e9144b1b4f3112545a10ca7002d26b49, type: 2}
+      Damage: 22
+      Hit_Size: {x: 0, y: 0}
+      Hit_Location: {x: 0, y: 0, z: 0}
+      Hurt_Size: {x: 0, y: 0}
+      Hurt_Location: {x: 0, y: 0, z: 0}
+      Launch_Angle: {x: 2, y: 2}
+      Launch_Magnitude: 2
