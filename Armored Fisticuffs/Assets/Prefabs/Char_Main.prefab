@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 4851220680336588243}
   - component: {fileID: 8053416389232853215}
   - component: {fileID: 3935230139062060718}
-  - component: {fileID: 6878378471287602366}
+  - component: {fileID: 2519048744381339275}
   m_Layer: 6
   m_Name: Char_Visual
   m_TagString: Untagged
@@ -225,7 +225,7 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
---- !u!95 &6878378471287602366
+--- !u!95 &2519048744381339275
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -367,8 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1cf890338139ef4b90562844bcdcedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 200
-  jumpHeight: 400
+  cStats: {fileID: 0}
   ignorePlayer:
     serializedVersion: 2
     m_Bits: 55
@@ -384,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4830fd6e65999264988bc204d35a9a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 2
+  cStats: {fileID: 0}
   ignorePlayer:
     serializedVersion: 2
     m_Bits: 55

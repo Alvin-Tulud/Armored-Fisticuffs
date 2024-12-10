@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 public class Aerial_State : State
 {
     [SerializeField]
-    private float playerSpeed = 2.0f;
+    private CharacterStats cStats;
+    private float playerSpeed;
     [SerializeField]
     private LayerMask ignorePlayer;
     private Vector3 playerVelocity;
@@ -22,6 +23,8 @@ public class Aerial_State : State
 
     private void Start()
     {
+        playerSpeed = cStats.Basic_Info.Character_Speed;
+
         temp_Vec = Vector2.zero;
         holding_Down_Move = false;
 
@@ -41,7 +44,7 @@ public class Aerial_State : State
     {
         if (IsGrounded())
         {
-            Debug.Log("on ground");
+            //Debug.Log("on ground");
             isRunning = false;
             holding_Down_Move = false;
             return Grounded_;
