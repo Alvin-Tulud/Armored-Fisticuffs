@@ -40,7 +40,7 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""b31c4ec9-4e3d-4cfc-80c0-9da0d913305d"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -58,7 +58,7 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                     ""name"": ""Attack_Heavy"",
                     ""type"": ""Button"",
                     ""id"": ""638c06a5-3868-42ba-a0cc-56d7ca93ef04"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -71,18 +71,40 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""UserInput;Default"",
+                    ""groups"": ""UserInput;Default;KB;Joint"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8cef2b3b-6c2d-4423-b1cb-a028caf75445"",
-                    ""path"": ""<HID::PowerA NSW wired controller>/button3"",
+                    ""id"": ""7f53f63e-a462-41b3-8732-6bd8dcf4100c"",
+                    ""path"": ""<HID::PowerA NSW wired controller>/button2"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""UserInput"",
+                    ""groups"": "";UserInput;Default"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0d3bdf1b-9cce-4aca-8c34-1ca41f625d6e"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Default;UserInput;Controller;Joint"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e6cb19d0-e80c-4ec7-93a2-57d072cc4698"",
+                    ""path"": ""<HID::PowerA NSW wired controller>/button2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Joystick"",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -104,7 +126,7 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""UserInput;Default"",
+                    ""groups"": ""UserInput;Default;KB;Joint"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -115,7 +137,7 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""UserInput;Default"",
+                    ""groups"": ""UserInput;Default;KB;Joint"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -126,7 +148,7 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""UserInput;Default"",
+                    ""groups"": ""UserInput;Default;KB;Joint"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -137,7 +159,7 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""UserInput;Default"",
+                    ""groups"": ""UserInput;Default;KB;Joint"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -159,7 +181,7 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""UserInput;Default"",
+                    ""groups"": ""UserInput;Default;Controller;Joint"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -170,7 +192,7 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""UserInput;Default"",
+                    ""groups"": ""UserInput;Default;Controller;Joint"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -181,7 +203,7 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/leftStick/left"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""UserInput;Default"",
+                    ""groups"": ""UserInput;Default;Controller;Joint"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -192,7 +214,117 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Gamepad>/leftStick/right"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""UserInput;Default"",
+                    ""groups"": ""UserInput;Default;Controller;Joint"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""L-Stick(pikachu cont idk)"",
+                    ""id"": ""028d59b4-5cab-49e0-892b-80b6471f7282"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""6baf9d72-e304-495e-8fff-4c1e4f499ce4"",
+                    ""path"": ""<Joystick>/stick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Default;UserInput"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""2ab00d15-1a90-485a-93ed-04267ba677a4"",
+                    ""path"": ""<Joystick>/stick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Default;UserInput"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""0c4e9302-b57d-4b95-b98e-256e1c76c71f"",
+                    ""path"": ""<Joystick>/stick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Default;UserInput"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""3b69a3ad-08c5-47b1-88de-9b1a8b07ed9d"",
+                    ""path"": ""<Joystick>/stick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Default;UserInput"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""70011ffc-cc4b-4b54-b329-e28f9b03086d"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""2f4d172e-41bc-4741-8d0a-6008f478d5b8"",
+                    ""path"": ""<Joystick>/stick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Joystick"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""9a41851d-c63a-4da5-81c8-1f2e596b46a5"",
+                    ""path"": ""<Joystick>/stick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Joystick"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""2f203d6b-ceb9-442f-89e1-7874ff21c610"",
+                    ""path"": ""<Joystick>/stick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Joystick"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""37bffa9e-49f0-4739-b09d-bdf0590ef963"",
+                    ""path"": ""<Joystick>/stick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Joystick"",
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -203,7 +335,7 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";UserInput;Default"",
+                    ""groups"": "";UserInput;Default;KB;Joint"",
                     ""action"": ""Attack_Light"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -211,10 +343,32 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""05a888c9-7cd1-44fd-96c7-78e5b813dc51"",
-                    ""path"": ""<XInputController>/buttonWest"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""UserInput"",
+                    ""groups"": ""UserInput;Default;Controller;Joint"",
+                    ""action"": ""Attack_Light"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""59b3ae91-01de-4253-b845-7825fadbdc83"",
+                    ""path"": ""<HID::PowerA NSW wired controller>/button3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";UserInput;Default"",
+                    ""action"": ""Attack_Light"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f6a1f574-75de-4609-841a-adefb726d787"",
+                    ""path"": ""<Joystick>/trigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Joystick"",
                     ""action"": ""Attack_Light"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -225,7 +379,7 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/g"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""UserInput;Default"",
+                    ""groups"": ""UserInput;Default;KB;Joint"",
                     ""action"": ""Attack_Heavy"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -233,10 +387,32 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""6785ca26-7d98-49b4-9963-f689fe546e9c"",
-                    ""path"": ""<XInputController>/buttonNorth"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""UserInput"",
+                    ""groups"": ""UserInput;Controller;Joint"",
+                    ""action"": ""Attack_Heavy"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9f3a8e01-9586-49a8-afe1-5a22cb214c6e"",
+                    ""path"": ""<HID::PowerA NSW wired controller>/button4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";UserInput;Default"",
+                    ""action"": ""Attack_Heavy"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e8a1c82b-3597-441f-87b1-e0178241e6c3"",
+                    ""path"": ""<HID::PowerA NSW wired controller>/button4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Joystick"",
                     ""action"": ""Attack_Heavy"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -404,24 +580,9 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": [
         {
-            ""name"": ""Default"",
-            ""bindingGroup"": ""Default"",
+            ""name"": ""Controller"",
+            ""bindingGroup"": ""Controller"",
             ""devices"": [
-                {
-                    ""devicePath"": ""<XInputController>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<Keyboard>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<SwitchProControllerHID>"",
-                    ""isOptional"": false,
-                    ""isOR"": false
-                },
                 {
                     ""devicePath"": ""<Gamepad>"",
                     ""isOptional"": false,
@@ -430,17 +591,12 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""UserInput"",
-            ""bindingGroup"": ""UserInput"",
+            ""name"": ""Joystick"",
+            ""bindingGroup"": ""Joystick"",
             ""devices"": [
                 {
-                    ""devicePath"": ""<Keyboard>"",
+                    ""devicePath"": ""<HID::PowerA NSW wired controller>"",
                     ""isOptional"": false,
-                    ""isOR"": false
-                },
-                {
-                    ""devicePath"": ""<Gamepad>"",
-                    ""isOptional"": true,
                     ""isOR"": false
                 }
             ]
@@ -644,22 +800,22 @@ public partial class @Character_Controls: IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
-    private int m_DefaultSchemeIndex = -1;
-    public InputControlScheme DefaultScheme
+    private int m_ControllerSchemeIndex = -1;
+    public InputControlScheme ControllerScheme
     {
         get
         {
-            if (m_DefaultSchemeIndex == -1) m_DefaultSchemeIndex = asset.FindControlSchemeIndex("Default");
-            return asset.controlSchemes[m_DefaultSchemeIndex];
+            if (m_ControllerSchemeIndex == -1) m_ControllerSchemeIndex = asset.FindControlSchemeIndex("Controller");
+            return asset.controlSchemes[m_ControllerSchemeIndex];
         }
     }
-    private int m_UserInputSchemeIndex = -1;
-    public InputControlScheme UserInputScheme
+    private int m_JoystickSchemeIndex = -1;
+    public InputControlScheme JoystickScheme
     {
         get
         {
-            if (m_UserInputSchemeIndex == -1) m_UserInputSchemeIndex = asset.FindControlSchemeIndex("UserInput");
-            return asset.controlSchemes[m_UserInputSchemeIndex];
+            if (m_JoystickSchemeIndex == -1) m_JoystickSchemeIndex = asset.FindControlSchemeIndex("Joystick");
+            return asset.controlSchemes[m_JoystickSchemeIndex];
         }
     }
     public interface IMovementActions

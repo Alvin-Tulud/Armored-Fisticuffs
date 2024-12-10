@@ -486,8 +486,8 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 638c06a5-3868-42ba-a0cc-56d7ca93ef04
     m_ActionName: 'Movement/Attack_Heavy[/Keyboard/g]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: UserInput
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Movement
   m_SplitScreenIndex: 0
   m_Camera: {fileID: 0}

@@ -14,12 +14,10 @@ public class Grounded_State : State
     [SerializeField]
     private LayerMask ignorePlayer;
     private Vector3 playerVelocity;
-    private float stopmoveDir;
     private Vector2 temp_Vec;
     private bool holding_Down_Movement;
 
     private bool canInput;
-    private float currinputTime;
 
     private Aerial_State Aerial_;
     private Rigidbody2D Rigidbody_;
@@ -34,8 +32,6 @@ public class Grounded_State : State
     {
         playerSpeed = cStats.Basic_Info.Character_Speed * 5;
         jumpHeight = cStats.Basic_Info.Character_Jump * 100;
-
-        stopmoveDir = 0;
 
         temp_Vec = Vector2.zero;
         holding_Down_Movement = false;
@@ -65,6 +61,12 @@ public class Grounded_State : State
             //Debug.Log("in air");
             isRunning = false;
             holding_Down_Movement = false;
+
+            if (Rigidbody_.linearVelocityX != 0)
+            {
+                Rigidbody_.linearVelocityX = Rigidbody_.linearVelocityX / 5;
+            }
+            
             return Aerial_;
         }
         else if (IsGrounded() && playerVelocity.y < 0)
@@ -280,8 +282,7 @@ public class Grounded_State : State
 
         UnityEngine.Debug.Log(boolName);
         startedAnim = true;
-
-        Rigidbody_.linearVelocityX = 0f;
+        holding_Down_Movement = false;
 
         input_string.Clear();
         

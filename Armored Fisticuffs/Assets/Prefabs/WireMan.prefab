@@ -165,18 +165,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7353389930196787764}
-        m_TargetAssemblyTypeName: Aerial_State, Assembly-CSharp
-        m_MethodName: checkLightAttack
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_ActionId: 019d19ed-76cb-4f26-be4c-00f845473c81
     m_ActionName: 'Movement/Attack_Light[/Keyboard/f]'
   - m_PersistentCalls:
@@ -188,11 +176,23 @@ MonoBehaviour:
     m_ActionId: 798ab6db-7977-472d-aae5-30cb2cf5118c
     m_ActionName: 'UI/Select[/Keyboard/space]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6573027836101350599}
+        m_TargetAssemblyTypeName: Grounded_State, Assembly-CSharp
+        m_MethodName: checkHeavyAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 638c06a5-3868-42ba-a0cc-56d7ca93ef04
     m_ActionName: 'Movement/Attack_Heavy[/Keyboard/g]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: UserInput
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Movement
   m_SplitScreenIndex: 0
   m_Camera: {fileID: 0}
@@ -373,7 +373,7 @@ Transform:
   - {fileID: 317650409333235270}
   - {fileID: 5449731222332822116}
   m_Father: {fileID: 4630893857622299368}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50.31638}
 --- !u!212 &7802798364218440578
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -423,7 +423,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6002249, y: 2.7125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -439,7 +439,7 @@ Animator:
   m_GameObject: {fileID: 2679364010928509591}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8bb27a7d07bbfee46807479464001d89, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
