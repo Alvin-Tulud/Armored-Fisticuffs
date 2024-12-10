@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Camera: {fileID: 0}
 --- !u!50 &4594618448878987420
 Rigidbody2D:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -209,8 +209,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -349,7 +349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6609142655340986157}
   - component: {fileID: 7802798364218440578}
-  - component: {fileID: 4787611563281679286}
+  - component: {fileID: 5897789546466961179}
   m_Layer: 6
   m_Name: Char_Visual
   m_TagString: Untagged
@@ -391,6 +391,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -426,29 +429,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &4787611563281679286
-Animation:
+--- !u!95 &5897789546466961179
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2679364010928509591}
   m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: a24110d9b1aa3604baade353689b7590, type: 2}
-  - {fileID: 7400000, guid: d3e38466fb2becf4eb88866e45dade96, type: 2}
-  - {fileID: 7400000, guid: b03145497ddeed340bcfe2651eb7603b, type: 2}
-  - {fileID: 7400000, guid: 2d43bf9020913c546a9ad3988b244d83, type: 2}
-  - {fileID: 7400000, guid: 66f28a4aad6c9344b991323514391c40, type: 2}
-  - {fileID: 7400000, guid: 5191b054af65dc44d8dbf1d128cfa4db, type: 2}
-  - {fileID: 7400000, guid: e9144b1b4f3112545a10ca7002d26b49, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
   m_UpdateMode: 0
-  m_CullingType: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8469821055718526223
 GameObject:
   m_ObjectHideFlags: 0

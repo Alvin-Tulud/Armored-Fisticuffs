@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
@@ -15,23 +14,28 @@ public class Grounded_State : State
     [SerializeField]
     private LayerMask ignorePlayer;
     private Vector3 playerVelocity;
+    private float stopmoveDir;
     private Vector2 temp_Vec;
     private bool holding_Down_Movement;
 
     private bool canInput;
+    private float currinputTime;
 
     private Aerial_State Aerial_;
     private Rigidbody2D Rigidbody_;
-    private Animation Animation_;
-    private bool isRunning;
+    private Animator Animator_;
+    private string boolName;
     private bool startedAnim;
+    private bool isRunning;
 
     private List<inputs> input_string;
 
     private void Start()
     {
-        playerSpeed = cStats.Basic_Info.Character_Speed * 100;
+        playerSpeed = cStats.Basic_Info.Character_Speed * 5;
         jumpHeight = cStats.Basic_Info.Character_Jump * 100;
+
+        stopmoveDir = 0;
 
         temp_Vec = Vector2.zero;
         holding_Down_Movement = false;
@@ -40,14 +44,12 @@ public class Grounded_State : State
 
         Aerial_ = GetComponent<Aerial_State>();
         Rigidbody_ = GetComponent<Rigidbody2D>();
-        Animation_ = transform.GetChild(0).GetComponent<Animation>();
+        Animator_ = transform.GetChild(0).GetComponent<Animator>();
         isRunning = false;
 
         startedAnim = false;
 
         input_string = new List<inputs>(2);
-
-        Debug.Log("Adding input: " + input_string.Count);
     }
 
     public override State ChangeState()
@@ -73,20 +75,18 @@ public class Grounded_State : State
         playerVelocity.y += gravityValue * Time.deltaTime;
         Rigidbody_.linearVelocity = playerVelocity * Time.deltaTime;
 
-
-
-        if (Animation_.isPlaying)
+        if (Animator_.GetNextAnimatorStateInfo(0).normalizedTime < 1.0f && startedAnim)
         {
-            Debug.Log("is playing anim");
             canInput = false;
-        }
-        else if (startedAnim && !Animation_.isPlaying)
-        {
-            Debug.Log("done anim");
-            canInput = true;
 
-            startedAnim = false;
+            if (Animator_.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9f && Animator_.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+            {
+                Animator_.SetBool(boolName, false);
+                canInput = true;
+                startedAnim = false;
+            }
         }
+
 
         isRunning = true;
         return this;
@@ -101,12 +101,16 @@ public class Grounded_State : State
                 //if horizontal value is left or right
                 if (temp_Vec.x < 0)
                 {
-                    Rigidbody_.AddForceX(-playerSpeed, ForceMode2D.Force);
+                    Rigidbody_.linearVelocityX = -playerSpeed;
                 }
                 else if (temp_Vec.x > 0)
                 {
-                    Rigidbody_.AddForceX(playerSpeed, ForceMode2D.Force);
+                    Rigidbody_.linearVelocityX = playerSpeed;
                 }
+            }
+            else
+            {
+                Rigidbody_.linearVelocityX = 0;
             }
         }
     }
@@ -136,12 +140,12 @@ public class Grounded_State : State
                 //if horizontal value is left or right
                 if (temp_Vec.x < 0)
                 {
-                    Debug.Log("input left");
+                    //Debug.Log("input left");
                     addString(inputs.Left);
                 }
                 else if (temp_Vec.x > 0)
                 {
-                    Debug.Log("input right");
+                    //Debug.Log("input right");
                     addString(inputs.Right);
                 }
             }
@@ -151,12 +155,12 @@ public class Grounded_State : State
                 //if vertical value is up or down
                 if (temp_Vec.y < 0)
                 {
-                    Debug.Log("input down");
+                    //Debug.Log("input down");
                     addString(inputs.Down);
                 }
                 else if (temp_Vec.y > 0)
                 {
-                    Debug.Log("input up");
+                    //Debug.Log("input up");
                     addString(inputs.Up);
                 }
             }
@@ -170,7 +174,7 @@ public class Grounded_State : State
         {
             if (context.action.triggered)
             {
-                Debug.Log("input light");
+                //Debug.Log("input light");
                 addString(inputs.Light);
             }
         }
@@ -183,7 +187,7 @@ public class Grounded_State : State
         {
             if (context.action.triggered)
             {
-                Debug.Log("input heavy");
+                //Debug.Log("input heavy");
                 addString(inputs.Heavy);
             }
         }
@@ -196,7 +200,7 @@ public class Grounded_State : State
         {
             if (context.action.triggered)
             {
-                Debug.Log("input jump");
+                //Debug.Log("input jump");
                 jumpChar();
             }
         }
@@ -207,17 +211,17 @@ public class Grounded_State : State
         
         input_string.Add(inputtype);
 
-        Debug.Log("Adding input: " + input_string.Count);
+        //Debug.Log("Adding input: " + input_string.Count);
         if (input_string.Count == 2)
         {
-            Debug.Log("checking string: " + input_string[0] + " , " + input_string[1]);
+            //Debug.Log("checking string: " + input_string[0] + " , " + input_string[1]);
             checkString();
         }
     }
 
     private bool IsGrounded()
     {
-        Debug.DrawLine(transform.position, transform.position + (Vector3.down * 0.55f), Color.blue, 1);
+        UnityEngine.Debug.DrawLine(transform.position, transform.position + (Vector3.down * 0.55f), Color.blue, 1);
         return Physics2D.Raycast(transform.position, Vector3.down, 0.55f, ignorePlayer);
     }
 
@@ -225,7 +229,6 @@ public class Grounded_State : State
     {
         if (IsGrounded())
         {
-            Debug.Log("jumped");
             Rigidbody_.AddForceY(jumpHeight, ForceMode2D.Force);
         }
     }
@@ -238,23 +241,19 @@ public class Grounded_State : State
             //Debug.Log("check light");
             if (input_string[0] == inputs.Light)
             {
-                Debug.Log("jab");
-                Animation_.clip = cStats.Grounded_Moves.Jab.Hit_Anim;
+                boolName = "doJab";
             }
             if (input_string[0] == inputs.Left || input_string[0] == inputs.Right)
             {
-                Debug.Log("ftilt");
-                Animation_.clip = cStats.Grounded_Moves.SideTilt.Hit_Anim;
+                boolName = "doF-Tilt";
             }
             if (input_string[0] == inputs.Down)
             {
-                Debug.Log("dtilt");
-                Animation_.clip = cStats.Grounded_Moves.DownTilt.Hit_Anim;
+                boolName = "doD-Tilt";
             }
             if (input_string[0] == inputs.Up)
             {
-                Debug.Log("utilt");
-                Animation_.clip = cStats.Grounded_Moves.UpTilt.Hit_Anim;
+                boolName = "doU-Tilt";
             }
         }
         else if (input_string[1] == inputs.Heavy)
@@ -262,18 +261,15 @@ public class Grounded_State : State
             //Debug.Log("check heavy");
             if (input_string[0] == inputs.Left || input_string[0] == inputs.Right)
             {
-                Debug.Log("fsmash");
-                Animation_.clip = cStats.Grounded_Moves.Heavy_SildeTilt.Hit_Anim;
+                boolName = "doF-Heavy";
             }
             if (input_string[0] == inputs.Down)
             {
-                Debug.Log("dsmash");
-                Animation_.clip = cStats.Grounded_Moves.Heavy_Down_Tilt.Hit_Anim;
+                boolName = "doD-Heavy";
             }
             if (input_string[0] == inputs.Up)
             {
-                Debug.Log("usmash");
-                Animation_.clip = cStats.Grounded_Moves.Heavy_Up_Tilt.Hit_Anim;
+                boolName = "doU-Heavy";
             }
         }
         else 
@@ -282,14 +278,13 @@ public class Grounded_State : State
             return;
         }
 
-        Rigidbody_.linearVelocity = Vector2.zero;
-        input_string.Clear();
-
-        Animation_.Play();
-
+        UnityEngine.Debug.Log(boolName);
         startedAnim = true;
 
+        Rigidbody_.linearVelocityX = 0f;
 
-        Debug.Log("Playing anim: " + Animation_.isPlaying + " , " + Animation_.clip);
+        input_string.Clear();
+        
+        Animator_.SetBool(boolName, true);
     }
 }

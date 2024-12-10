@@ -8,7 +8,7 @@ AnimationClip:
   m_PrefabAsset: {fileID: 0}
   m_Name: D-Heavy
   serializedVersion: 7
-  m_Legacy: 1
+  m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
   m_RotationCurves: []
@@ -43,8 +43,23 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    pptrCurveMapping:
+    - {fileID: 1027104382, guid: 1994503edc857dc4080b2b686baa7479, type: 3}
+    - {fileID: 2102298960, guid: 1994503edc857dc4080b2b686baa7479, type: 3}
+    - {fileID: -2015524737, guid: 1994503edc857dc4080b2b686baa7479, type: 3}
+    - {fileID: -500057648, guid: 1994503edc857dc4080b2b686baa7479, type: 3}
+    - {fileID: 2102298960, guid: 1994503edc857dc4080b2b686baa7479, type: 3}
+    - {fileID: 1027104382, guid: 1994503edc857dc4080b2b686baa7479, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
