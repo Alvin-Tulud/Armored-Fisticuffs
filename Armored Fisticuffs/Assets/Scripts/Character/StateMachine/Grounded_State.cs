@@ -24,6 +24,7 @@ public class Grounded_State : State
     private Rigidbody2D Rigidbody_;
     private Animation Animation_;
     private bool isRunning;
+    private bool startedAnim;
 
     private List<inputs> input_string;
 
@@ -39,10 +40,14 @@ public class Grounded_State : State
 
         Aerial_ = GetComponent<Aerial_State>();
         Rigidbody_ = GetComponent<Rigidbody2D>();
-        Animation_ = transform.GetChild(2).GetComponent<Animation>();
+        Animation_ = transform.GetChild(0).GetComponent<Animation>();
         isRunning = false;
 
+        startedAnim = false;
+
         input_string = new List<inputs>(2);
+
+        Debug.Log("Adding input: " + input_string.Count);
     }
 
     public override State ChangeState()
@@ -66,17 +71,21 @@ public class Grounded_State : State
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
-        Rigidbody_.velocity = playerVelocity * Time.deltaTime;
+        Rigidbody_.linearVelocity = playerVelocity * Time.deltaTime;
 
 
 
         if (Animation_.isPlaying)
         {
+            Debug.Log("is playing anim");
             canInput = false;
         }
-        else
+        else if (startedAnim && !Animation_.isPlaying)
         {
+            Debug.Log("done anim");
             canInput = true;
+
+            startedAnim = false;
         }
 
         isRunning = true;
@@ -121,35 +130,33 @@ public class Grounded_State : State
                 holding_Down_Movement = false;
             }
 
-
-
             //if horizontal input is greater than vertical
-            if (Mathf.Abs(temp_Vec.x) > Mathf.Abs(temp_Vec.y))
+            if (Mathf.Abs(temp_Vec.x) > Mathf.Abs(temp_Vec.y) && context.started)
             {
                 //if horizontal value is left or right
                 if (temp_Vec.x < 0)
                 {
-                    //Debug.Log("input left");
+                    Debug.Log("input left");
                     addString(inputs.Left);
                 }
                 else if (temp_Vec.x > 0)
                 {
-                    //Debug.Log("input right");
+                    Debug.Log("input right");
                     addString(inputs.Right);
                 }
             }
             //if vertical input is greater than horizontal
-            else
+            else if (context.started)
             {
                 //if vertical value is up or down
                 if (temp_Vec.y < 0)
                 {
-                    //Debug.Log("input down");
+                    Debug.Log("input down");
                     addString(inputs.Down);
                 }
                 else if (temp_Vec.y > 0)
                 {
-                    //Debug.Log("input up");
+                    Debug.Log("input up");
                     addString(inputs.Up);
                 }
             }
@@ -163,7 +170,7 @@ public class Grounded_State : State
         {
             if (context.action.triggered)
             {
-                //Debug.Log("input light");
+                Debug.Log("input light");
                 addString(inputs.Light);
             }
         }
@@ -176,7 +183,7 @@ public class Grounded_State : State
         {
             if (context.action.triggered)
             {
-                //Debug.Log("input heavy");
+                Debug.Log("input heavy");
                 addString(inputs.Heavy);
             }
         }
@@ -189,7 +196,7 @@ public class Grounded_State : State
         {
             if (context.action.triggered)
             {
-                //Debug.Log("input jump");
+                Debug.Log("input jump");
                 jumpChar();
             }
         }
@@ -197,15 +204,15 @@ public class Grounded_State : State
 
     private void addString(inputs inputtype)
     {
-        //Debug.Log("Adding input");
+        
+        input_string.Add(inputtype);
+
+        Debug.Log("Adding input: " + input_string.Count);
         if (input_string.Count == 2)
         {
+            Debug.Log("checking string: " + input_string[0] + " , " + input_string[1]);
             checkString();
-
-            input_string.Remove(0);
         }
-
-        input_string.Add(inputtype);
     }
 
     private bool IsGrounded()
@@ -218,49 +225,71 @@ public class Grounded_State : State
     {
         if (IsGrounded())
         {
-            //Debug.Log("jumped");
+            Debug.Log("jumped");
             Rigidbody_.AddForceY(jumpHeight, ForceMode2D.Force);
         }
     }
 
     private void checkString()
     {
+        //Debug.Log("check");
         if (input_string[1] == inputs.Light)
         {
+            //Debug.Log("check light");
             if (input_string[0] == inputs.Light)
             {
+                Debug.Log("jab");
                 Animation_.clip = cStats.Grounded_Moves.Jab.Hit_Anim;
             }
             if (input_string[0] == inputs.Left || input_string[0] == inputs.Right)
             {
+                Debug.Log("ftilt");
                 Animation_.clip = cStats.Grounded_Moves.SideTilt.Hit_Anim;
             }
             if (input_string[0] == inputs.Down)
             {
+                Debug.Log("dtilt");
                 Animation_.clip = cStats.Grounded_Moves.DownTilt.Hit_Anim;
             }
             if (input_string[0] == inputs.Up)
             {
+                Debug.Log("utilt");
                 Animation_.clip = cStats.Grounded_Moves.UpTilt.Hit_Anim;
             }
         }
         else if (input_string[1] == inputs.Heavy)
         {
+            //Debug.Log("check heavy");
             if (input_string[0] == inputs.Left || input_string[0] == inputs.Right)
             {
+                Debug.Log("fsmash");
                 Animation_.clip = cStats.Grounded_Moves.Heavy_SildeTilt.Hit_Anim;
-            }
-            if (input_string[0] == inputs.Up)
-            {
-                Animation_.clip = cStats.Grounded_Moves.Heavy_Up_Tilt.Hit_Anim;
             }
             if (input_string[0] == inputs.Down)
             {
+                Debug.Log("dsmash");
                 Animation_.clip = cStats.Grounded_Moves.Heavy_Down_Tilt.Hit_Anim;
             }
+            if (input_string[0] == inputs.Up)
+            {
+                Debug.Log("usmash");
+                Animation_.clip = cStats.Grounded_Moves.Heavy_Up_Tilt.Hit_Anim;
+            }
+        }
+        else 
+        {
+            input_string.Clear();
+            return;
         }
 
-        Animation_.Play();
+        Rigidbody_.linearVelocity = Vector2.zero;
         input_string.Clear();
+
+        Animation_.Play();
+
+        startedAnim = true;
+
+
+        Debug.Log("Playing anim: " + Animation_.isPlaying + " , " + Animation_.clip);
     }
 }

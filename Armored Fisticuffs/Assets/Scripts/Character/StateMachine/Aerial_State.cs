@@ -97,10 +97,12 @@ public class Aerial_State : State
                 //if horizontal value is left or right
                 if (temp_Vec.x < 0)
                 {
+                    //Debug.Log("left");
                     addString(inputs.Left);
                 }
                 else
                 {
+                    //Debug.Log("right");
                     addString(inputs.Right);
                 }
             }
@@ -110,34 +112,14 @@ public class Aerial_State : State
                 //if vertical value is up or down
                 if (temp_Vec.y < 0)
                 {
+                    //Debug.Log("down");
                     addString(inputs.Down);
                 }
                 else if (temp_Vec.y > 0)
                 {
+                    //Debug.Log("up");
                     addString(inputs.Up);
                 }
-            }
-        }
-    }
-
-    public void checkLightAttack(InputAction.CallbackContext context)
-    {
-        if (isRunning)
-        {
-            if (context.action.triggered)
-            {
-                addString(inputs.Light);
-            }
-        }
-    }
-
-    public void checkHeavyAttack(InputAction.CallbackContext context)
-    {
-        if (isRunning)
-        {
-            if (context.action.triggered)
-            {
-                addString(inputs.Heavy);
             }
         }
     }
@@ -150,7 +132,7 @@ public class Aerial_State : State
 
     private void addString(inputs inputtype)
     {
-        Debug.Log("Adding input");
+        //Debug.Log("Adding input");
         if (input_string.Count == 2)
         {
             input_string.Remove(0);
