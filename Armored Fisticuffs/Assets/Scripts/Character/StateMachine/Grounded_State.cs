@@ -211,10 +211,10 @@ public class Grounded_State : State
         
         input_string.Add(inputtype);
 
-        //Debug.Log("Adding input: " + input_string.Count);
-        if (input_string.Count == 2)
+        Debug.Log("Adding input: " + input_string.Count);
+        if (input_string.Count >= 2)
         {
-            //Debug.Log("checking string: " + input_string[0] + " , " + input_string[1]);
+            Debug.Log("checking string: " + input_string[input_string.Count - 2] + " , " + input_string[input_string.Count - 1]);
             checkString();
         }
     }
@@ -236,45 +236,45 @@ public class Grounded_State : State
     private void checkString()
     {
         //Debug.Log("check");
-        if (input_string[1] == inputs.Light)
+        if (input_string[input_string.Count - 1] == inputs.Light)
         {
             //Debug.Log("check light");
-            if (input_string[0] == inputs.Light)
+            if (input_string[input_string.Count - 2] == inputs.Light)
             {
                 boolName = "doJab";
             }
-            if (input_string[0] == inputs.Left || input_string[0] == inputs.Right)
+            if (input_string[input_string.Count - 2] == inputs.Left || input_string[input_string.Count - 2] == inputs.Right)
             {
                 boolName = "doF-Tilt";
             }
-            if (input_string[0] == inputs.Down)
+            if (input_string[input_string.Count - 2] == inputs.Down)
             {
                 boolName = "doD-Tilt";
             }
-            if (input_string[0] == inputs.Up)
+            if (input_string[input_string.Count - 2] == inputs.Up)
             {
                 boolName = "doU-Tilt";
             }
         }
-        else if (input_string[1] == inputs.Heavy)
+        else if (input_string[input_string.Count - 1] == inputs.Heavy)
         {
             //Debug.Log("check heavy");
-            if (input_string[0] == inputs.Left || input_string[0] == inputs.Right)
+            if (input_string[input_string.Count - 2] == inputs.Left || input_string[input_string.Count - 2] == inputs.Right)
             {
                 boolName = "doF-Heavy";
             }
-            if (input_string[0] == inputs.Down)
+            if (input_string[input_string.Count - 2] == inputs.Down)
             {
                 boolName = "doD-Heavy";
             }
-            if (input_string[0] == inputs.Up)
+            if (input_string[input_string.Count - 2] == inputs.Up)
             {
                 boolName = "doU-Heavy";
             }
         }
         else 
         {
-            input_string.Clear();
+            input_string.Remove(input_string[0]);
             return;
         }
 
