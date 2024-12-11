@@ -15,16 +15,17 @@ public class Grounded_State : State
     private LayerMask ignorePlayer;
     private Vector3 playerVelocity;
     private Vector2 temp_Vec;
-    private bool holding_Down_Movement;
+    public bool holding_Down_Movement;
 
-    private bool canInput;
+    public bool canInput;
 
     private Aerial_State Aerial_;
     private Rigidbody2D Rigidbody_;
     private Animator Animator_;
-    private string boolName;
-    private bool startedAnim;
-    private bool isRunning;
+    public string boolName;
+    public bool startedAnim;
+    public bool isRunning;
+    public bool firstRun;
 
     private List<inputs> input_string;
 
@@ -42,6 +43,7 @@ public class Grounded_State : State
         Rigidbody_ = GetComponent<Rigidbody2D>();
         Animator_ = transform.GetChild(0).GetComponent<Animator>();
         isRunning = false;
+        firstRun = true;
 
         startedAnim = false;
 
@@ -56,17 +58,31 @@ public class Grounded_State : State
 
     public override State RunCurrentState()
     {
+        checkAnim();
+
         if (!IsGrounded())
         {
+            canInput = true;
+
             //Debug.Log("in air");
             isRunning = false;
+
             holding_Down_Movement = false;
 
             if (Rigidbody_.linearVelocityX != 0)
             {
                 Rigidbody_.linearVelocityX = Rigidbody_.linearVelocityX / 5;
             }
-            
+
+            if (boolName != null)
+            {
+                Animator_.SetBool(boolName, false);
+
+                boolName = null;
+            }
+
+            startedAnim = false;
+
             return Aerial_;
         }
         else if (IsGrounded() && playerVelocity.y < 0)
@@ -74,27 +90,15 @@ public class Grounded_State : State
             playerVelocity.y = 0f;
         }
 
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        Rigidbody_.linearVelocity = playerVelocity * Time.deltaTime;
-
-        if (Animator_.GetNextAnimatorStateInfo(0).normalizedTime < 1.0f && startedAnim)
-        {
-            canInput = false;
-
-            if (Animator_.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9f && Animator_.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
-            {
-                Animator_.SetBool(boolName, false);
-                canInput = true;
-                startedAnim = false;
-            }
-        }
+        checkHorizontalMove();
 
 
         isRunning = true;
+
         return this;
     }
 
-    private void FixedUpdate()
+    public void checkHorizontalMove()
     {
         if (isRunning && holding_Down_Movement)
         {
@@ -113,6 +117,31 @@ public class Grounded_State : State
             else
             {
                 Rigidbody_.linearVelocityX = 0;
+            }
+        }
+        else if (!holding_Down_Movement)
+        {
+            Rigidbody_.linearVelocityX = 0;
+        }
+    }
+
+    public void checkAnim()
+    {
+        if (Animator_.GetNextAnimatorStateInfo(0).normalizedTime < 1.0f && startedAnim)
+        {
+            canInput = false;
+
+            holding_Down_Movement = false;
+
+            if (Animator_.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9f && Animator_.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+            {
+                Animator_.SetBool(boolName, false);
+
+                boolName = null;
+
+                canInput = true;
+
+                startedAnim = false;
             }
         }
     }
@@ -223,8 +252,8 @@ public class Grounded_State : State
 
     private bool IsGrounded()
     {
-        UnityEngine.Debug.DrawLine(transform.position, transform.position + (Vector3.down * 0.55f), Color.blue, 1);
-        return Physics2D.Raycast(transform.position, Vector3.down, 0.55f, ignorePlayer);
+        UnityEngine.Debug.DrawLine(transform.position, transform.position + (Vector3.down * 1f), Color.blue, 1);
+        return Physics2D.Raycast(transform.position, Vector3.down, 1f, ignorePlayer);
     }
 
     private void jumpChar()

@@ -16,7 +16,7 @@ MonoBehaviour:
     Character_Name: WireMan
     Character_Health: 125
     Character_Speed: 2
-    Character_Jump: 4
+    Character_Jump: 3.75
   Grounded_Moves:
     Jab:
       Hit_Anim: {fileID: 7400000, guid: 0f8ac2d555e8c754fa59a6637e584754, type: 2}

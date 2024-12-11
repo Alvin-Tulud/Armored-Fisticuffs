@@ -126,8 +126,8 @@ public class Aerial_State : State
 
     private bool IsGrounded()
     {
-        Debug.DrawLine(transform.position, transform.position + (Vector3.down * 0.55f), Color.red, 1);
-        return Physics2D.Raycast(transform.position, Vector3.down, 0.55f, ignorePlayer);
+        Debug.DrawLine(transform.position, transform.position + (Vector3.down * 1f), Color.red, 1);
+        return Physics2D.Raycast(transform.position, Vector3.down, 1f, ignorePlayer);
     }
 
     private void addString(inputs inputtype)
