@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 317650409333235270}
   - component: {fileID: 4928779443196365542}
   - component: {fileID: 4826286449189001842}
+  - component: {fileID: 2520088478701264121}
   m_Layer: 6
   m_Name: Char_Hurt
   m_TagString: Untagged
@@ -361,6 +362,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2520088478701264121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2182005776248318263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1807c4960b7e440b009de2623e9061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2679364010928509591
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +496,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5449731222332822116}
   - component: {fileID: 5584178814650623211}
-  m_Layer: 6
+  - component: {fileID: 484513031459495128}
+  m_Layer: 7
   m_Name: Char_Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,3 +574,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &484513031459495128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8469821055718526223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d374807e94a56834485591cce9a4c197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
