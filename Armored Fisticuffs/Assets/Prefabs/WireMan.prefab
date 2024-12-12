@@ -252,6 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e28d86bc0414bef489a873f0d4daf136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Yourheatlh: {fileID: 0}
+  Enemyhealth: {fileID: 0}
 --- !u!1 &2182005776248318263
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +586,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 225187946, guid: 1994503edc857dc4080b2b686baa7479, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

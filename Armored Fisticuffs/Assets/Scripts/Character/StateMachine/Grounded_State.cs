@@ -121,7 +121,6 @@ public class Grounded_State : State
 
         checkHorizontalMove();
 
-
         isRunning = true;
 
         return this;
@@ -166,7 +165,7 @@ public class Grounded_State : State
 
     public void checkAnim()
     {
-        if (Animator_.GetNextAnimatorStateInfo(0).normalizedTime < 1.0f && startedAnim)
+        if (startedAnim && Animator_.GetNextAnimatorStateInfo(0).normalizedTime < 1.0f)
         {
             canInput = false;
 
@@ -348,7 +347,7 @@ public class Grounded_State : State
             return;
         }
 
-        UnityEngine.Debug.Log(boolName);
+        //UnityEngine.Debug.Log(boolName);
         startedAnim = true;
         holding_Down_Movement = false;
 

@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d28f3fd4cabe9364abaa936d385d6f33, type: 3}
+  m_Name: BlueKnight
+  m_EditorClassIdentifier: 
+  Basic_Info:
+    Character_Name: BlueKnight
+    Character_Health: 125
+    Character_Speed: 2
+    Character_Jump: 3.75
+  Grounded_Moves:
+    Jab:
+      Damage: 4
+      Launch_Angle: {x: 1, y: 0}
+      Launch_Magnitude: 1
+    SideTilt:
+      Damage: 12
+      Launch_Angle: {x: 1, y: 0}
+      Launch_Magnitude: 10
+    Heavy_SildeTilt:
+      Damage: 25
+      Launch_Angle: {x: 1, y: 0}
+      Launch_Magnitude: 20
+    DownTilt:
+      Damage: 5
+      Launch_Angle: {x: 0.5, y: -0.5}
+      Launch_Magnitude: 5
+    Heavy_Down_Tilt:
+      Damage: 18
+      Launch_Angle: {x: 1, y: -2}
+      Launch_Magnitude: 40
+    UpTilt:
+      Damage: 9
+      Launch_Angle: {x: 0.25, y: 1}
+      Launch_Magnitude: 20
+    Heavy_Up_Tilt:
+      Damage: 22
+      Launch_Angle: {x: 2, y: 2}
+      Launch_Magnitude: 5

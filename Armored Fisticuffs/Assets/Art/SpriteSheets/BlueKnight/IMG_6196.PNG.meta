@@ -93,7 +93,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 160
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -138,6 +138,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -149,8 +175,8 @@ TextureImporter:
         y: 2670
         width: 191
         height: 405
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5772535, y: 0.3603395}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -171,8 +197,8 @@ TextureImporter:
         y: 2671
         width: 313
         height: 405
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.35071746, y: 0.3664117}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -193,8 +219,8 @@ TextureImporter:
         y: 1774
         width: 362
         height: 385
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.43885878, y: 0.37011814}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -212,11 +238,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 438
-        y: 2227
+        y: 2228
         width: 232
         height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4717331, y: 0.34834716}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -237,8 +263,8 @@ TextureImporter:
         y: 2231
         width: 242
         height: 396
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5711352, y: 0.34681532}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -256,11 +282,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 909
-        y: 2141
-        width: 623
-        height: 458
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 2234
+        width: 377
+        height: 365
+      alignment: 9
+      pivot: {x: 0.47173312, y: 0.387706}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -281,8 +307,8 @@ TextureImporter:
         y: 1335
         width: 221
         height: 402
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.42210588, y: 0.3470623}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -303,8 +329,8 @@ TextureImporter:
         y: 916
         width: 225
         height: 411
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4651663, y: 0.3405361}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -321,12 +347,12 @@ TextureImporter:
       name: IMG_6196_8
       rect:
         serializedVersion: 2
-        x: 661
-        y: 919
-        width: 368
+        x: 662
+        y: 918
+        width: 292
         height: 407
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.3012273, y: 0.39618295}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -348,7 +374,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -369,8 +395,8 @@ TextureImporter:
         y: 477
         width: 253
         height: 376
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.54212123, y: 0.3648292}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -387,12 +413,12 @@ TextureImporter:
       name: IMG_6196_11
       rect:
         serializedVersion: 2
-        x: 936
+        x: 937
         y: 478
         width: 332
         height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.47037038, y: 0.3417648}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -413,8 +439,8 @@ TextureImporter:
         y: 31
         width: 236
         height: 430
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5793529, y: 0.35926843}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -431,12 +457,12 @@ TextureImporter:
       name: IMG_6196_13
       rect:
         serializedVersion: 2
-        x: 661
-        y: 34
+        x: 659
+        y: 33
         width: 358
         height: 436
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.32351974, y: 0.37924296}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -458,7 +484,7 @@ TextureImporter:
         width: 25
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -475,7 +501,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 89a00c4a13e53044383f1069eb4b95fc
     internalID: 0
     vertices: []
     indices: 
@@ -484,7 +510,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      IMG_6196_0: 1616520478315594762
+      IMG_6196_1: 7318932302138747336
+      IMG_6196_10: 3061910737869005121
+      IMG_6196_11: 2244513210870366372
+      IMG_6196_12: 4533254760176000600
+      IMG_6196_13: -8876983565629734276
+      IMG_6196_14: -3128953358841346098
+      IMG_6196_2: 3210009053188571892
+      IMG_6196_3: -4686686611318288150
+      IMG_6196_4: 5184537647813016260
+      IMG_6196_5: -2898251529801481088
+      IMG_6196_6: 3704430701675262847
+      IMG_6196_7: -6298469927360007519
+      IMG_6196_8: -6552112422585081338
+      IMG_6196_9: -1896007638294850388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
