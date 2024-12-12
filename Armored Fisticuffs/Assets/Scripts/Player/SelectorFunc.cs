@@ -53,7 +53,8 @@ public class SelectorFunc : MonoBehaviour
     {
         if (context.action.triggered)
         {
-
+            RaycastHit2D hit;
+            hit = Physics2D.Raycast(transform.position, Vector2.zero);
         }
     }
 }
