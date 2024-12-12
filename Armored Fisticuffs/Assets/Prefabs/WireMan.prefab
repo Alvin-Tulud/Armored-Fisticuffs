@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4630893857622299368}
   - component: {fileID: 6573027836101350599}
   - component: {fileID: 7353389930196787764}
+  - component: {fileID: 9018430473211199955}
   - component: {fileID: 2516486282898694649}
   - component: {fileID: 430131213274087644}
   - component: {fileID: 4594618448878987420}
@@ -53,6 +54,12 @@ MonoBehaviour:
   ignorePlayer:
     serializedVersion: 2
     m_Bits: 55
+  holding_Down_Movement: 0
+  canInput: 0
+  boolName: 
+  startedAnim: 0
+  isRunning: 0
+  firstRun: 0
 --- !u!114 &7353389930196787764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +76,21 @@ MonoBehaviour:
   ignorePlayer:
     serializedVersion: 2
     m_Bits: 55
+--- !u!114 &9018430473211199955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807414781907899072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ecd558ea2ebd414cadcc1b9df28db75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ignorePlayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &2516486282898694649
 MonoBehaviour:
   m_ObjectHideFlags: 0

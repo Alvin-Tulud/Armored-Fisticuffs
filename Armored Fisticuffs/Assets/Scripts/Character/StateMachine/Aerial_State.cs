@@ -16,10 +16,9 @@ public class Aerial_State : State
     private bool holding_Down_Move;
 
     private Grounded_State Grounded_;
+    private Stun_State Stun_;
     private Rigidbody2D Rigidbody_;
     private bool isRunning;
-
-    private List<inputs> input_string;
 
     private void Start()
     {
@@ -29,10 +28,9 @@ public class Aerial_State : State
         holding_Down_Move = false;
 
         Grounded_ = GetComponent<Grounded_State>();
+        Stun_ = GetComponent<Stun_State>();
         Rigidbody_ = GetComponent<Rigidbody2D>();
         isRunning = false;
-
-        input_string = new List<inputs>(2);
     }
     public override State ChangeState()
     {
@@ -50,11 +48,13 @@ public class Aerial_State : State
             return Grounded_;
         }
 
+        checkHorizontalMove();
+
         isRunning = true;
         return this;
     }
 
-    private void FixedUpdate()
+    public void checkHorizontalMove()
     {
         if (isRunning && holding_Down_Move)
         {
@@ -63,13 +63,21 @@ public class Aerial_State : State
                 //if horizontal value is left or right
                 if (temp_Vec.x < 0)
                 {
-                    Rigidbody_.AddForceX(-playerSpeed, ForceMode2D.Force);
+                    Rigidbody_.linearVelocityX = -playerSpeed;
                 }
                 else if (temp_Vec.x > 0)
                 {
-                    Rigidbody_.AddForceX(playerSpeed, ForceMode2D.Force);
+                    Rigidbody_.linearVelocityX = playerSpeed;
                 }
             }
+            else
+            {
+                Rigidbody_.linearVelocityX = 0;
+            }
+        }
+        else if (!holding_Down_Move)
+        {
+            Rigidbody_.linearVelocityX = 0;
         }
     }
 
@@ -90,37 +98,6 @@ public class Aerial_State : State
             {
                 holding_Down_Move = false;
             }
-
-            //if horizontal input is greater than vertical
-            if (Mathf.Abs(temp_Vec.x) > Mathf.Abs(temp_Vec.y))
-            {
-                //if horizontal value is left or right
-                if (temp_Vec.x < 0)
-                {
-                    //Debug.Log("left");
-                    addString(inputs.Left);
-                }
-                else
-                {
-                    //Debug.Log("right");
-                    addString(inputs.Right);
-                }
-            }
-            //if vertical input is greater than horizontal
-            else
-            {
-                //if vertical value is up or down
-                if (temp_Vec.y < 0)
-                {
-                    //Debug.Log("down");
-                    addString(inputs.Down);
-                }
-                else if (temp_Vec.y > 0)
-                {
-                    //Debug.Log("up");
-                    addString(inputs.Up);
-                }
-            }
         }
     }
 
@@ -128,21 +105,5 @@ public class Aerial_State : State
     {
         Debug.DrawLine(transform.position, transform.position + (Vector3.down * 1f), Color.red, 1);
         return Physics2D.Raycast(transform.position, Vector3.down, 1f, ignorePlayer);
-    }
-
-    private void addString(inputs inputtype)
-    {
-        //Debug.Log("Adding input");
-        if (input_string.Count == 2)
-        {
-            input_string.Remove(0);
-        }
-
-        input_string.Add(inputtype);
-    }
-
-    private void checkString()
-    {
-        
     }
 }

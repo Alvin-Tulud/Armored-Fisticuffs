@@ -20,6 +20,7 @@ public class Grounded_State : State
     public bool canInput;
 
     private Aerial_State Aerial_;
+    private Stun_State Stun_;
     private Rigidbody2D Rigidbody_;
     private Animator Animator_;
     public string boolName;
@@ -40,6 +41,7 @@ public class Grounded_State : State
         canInput = true;
 
         Aerial_ = GetComponent<Aerial_State>();
+        Stun_ = GetComponent<Stun_State>();
         Rigidbody_ = GetComponent<Rigidbody2D>();
         Animator_ = transform.GetChild(0).GetComponent<Animator>();
         isRunning = false;

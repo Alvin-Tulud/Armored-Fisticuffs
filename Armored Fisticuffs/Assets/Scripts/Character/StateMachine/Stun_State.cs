@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Stun_State : State
@@ -9,6 +10,7 @@ public class Stun_State : State
     private Grounded_State Grounded_;
 
     private bool inStun;
+    private bool firstCall;
 
 
     void Start()
@@ -26,15 +28,36 @@ public class Stun_State : State
 
     public override State RunCurrentState()
     {
+        if (firstCall)
+        {
+            inStun = true;
 
+            StartCoroutine(stunTimer());
+        }
+
+        else if (!inStun)
+        {
+            firstCall = true;
+
+            if (IsGrounded())
+            {
+                return Grounded_;
+            }
+            else
+            {
+                return Aerial_;
+            }
+        }
 
         return this;
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator stunTimer()
     {
-        
+        firstCall = false;
+        yield return new WaitForSeconds(0.2f);
+
+        inStun = false;
     }
 
     private bool IsGrounded()
