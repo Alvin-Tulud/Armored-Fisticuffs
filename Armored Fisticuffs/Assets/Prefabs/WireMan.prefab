@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2516486282898694649}
   - component: {fileID: 430131213274087644}
   - component: {fileID: 4594618448878987420}
+  - component: {fileID: -6632441380079018056}
   m_Layer: 6
   m_Name: WireMan
   m_TagString: Untagged
@@ -54,12 +55,6 @@ MonoBehaviour:
   ignorePlayer:
     serializedVersion: 2
     m_Bits: 55
-  holding_Down_Movement: 0
-  canInput: 0
-  boolName: 
-  startedAnim: 0
-  isRunning: 0
-  firstRun: 0
 --- !u!114 &7353389930196787764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ignorePlayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 55
 --- !u!114 &2516486282898694649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +240,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-6632441380079018056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807414781907899072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28d86bc0414bef489a873f0d4daf136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2182005776248318263
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +392,7 @@ GameObject:
   - component: {fileID: 6609142655340986157}
   - component: {fileID: 7802798364218440578}
   - component: {fileID: 5897789546466961179}
+  - component: {fileID: 8007249482938686280}
   m_Layer: 6
   m_Name: Char_Visual
   m_TagString: Untagged
@@ -486,6 +494,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8007249482938686280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2679364010928509591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d374807e94a56834485591cce9a4c197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cStats: {fileID: 11400000, guid: cf27b5be403542d4f9e877ec157de013, type: 2}
 --- !u!1 &8469821055718526223
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +517,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5449731222332822116}
   - component: {fileID: 5584178814650623211}
-  - component: {fileID: 484513031459495128}
   m_Layer: 7
   m_Name: Char_Damage
   m_TagString: Untagged
@@ -574,15 +594,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &484513031459495128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8469821055718526223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d374807e94a56834485591cce9a4c197, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -28,17 +28,16 @@ public class PInManager : MonoBehaviour
         {
             p1 = input.gameObject;
             p1.transform.position = spawnLoc[1].transform.position;
+            p1.GetComponent<PlayerStats>().setYourHPSlider(GameObject.FindWithTag("P1health"));
+            p1.GetComponent<PlayerStats>().setEnemyHPSlider(GameObject.FindWithTag("P2Health"));
         }
         else
         {
             p2 = input.gameObject;
             p2.transform.position = spawnLoc[0].transform.position;
             p2.transform.rotation = Quaternion.Euler(new Vector3(0f, 180f, 0f));
+            p2.GetComponent<PlayerStats>().setYourHPSlider(GameObject.FindWithTag("P2Health"));
+            p2.GetComponent<PlayerStats>().setEnemyHPSlider(GameObject.FindWithTag("P1health"));
         }
-    }
-
-    private void Update()
-    {
-        
     }
 }

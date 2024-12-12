@@ -19,6 +19,7 @@ public class Aerial_State : State
     private Stun_State Stun_;
     private Rigidbody2D Rigidbody_;
     private bool isRunning;
+    private bool gotStun;
 
     private void Start()
     {
@@ -31,6 +32,7 @@ public class Aerial_State : State
         Stun_ = GetComponent<Stun_State>();
         Rigidbody_ = GetComponent<Rigidbody2D>();
         isRunning = false;
+        gotStun = false;
     }
     public override State ChangeState()
     {
@@ -52,6 +54,16 @@ public class Aerial_State : State
 
         isRunning = true;
         return this;
+    }
+
+    public bool getRunning()
+    {
+        return isRunning;
+    }
+
+    public void doStun()
+    {
+        gotStun = true;
     }
 
     public void checkHorizontalMove()

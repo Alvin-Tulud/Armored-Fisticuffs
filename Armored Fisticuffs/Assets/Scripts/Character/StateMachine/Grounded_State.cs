@@ -15,18 +15,19 @@ public class Grounded_State : State
     private LayerMask ignorePlayer;
     private Vector3 playerVelocity;
     private Vector2 temp_Vec;
-    public bool holding_Down_Movement;
+    private bool holding_Down_Movement;
 
-    public bool canInput;
+    private bool canInput;
 
     private Aerial_State Aerial_;
     private Stun_State Stun_;
     private Rigidbody2D Rigidbody_;
     private Animator Animator_;
-    public string boolName;
-    public bool startedAnim;
-    public bool isRunning;
-    public bool firstRun;
+    private string boolName;
+    private bool startedAnim;
+    private bool isRunning;
+    private bool firstRun;
+    private bool gotStun;
 
     private List<inputs> input_string;
 
@@ -46,10 +47,13 @@ public class Grounded_State : State
         Animator_ = transform.GetChild(0).GetComponent<Animator>();
         isRunning = false;
         firstRun = true;
+        gotStun = false;
 
         startedAnim = false;
 
         input_string = new List<inputs>(2);
+
+        GetComponent<PlayerStats>().setMaxHeatlh(cStats.Basic_Info.Character_Health);
     }
 
     public override State ChangeState()
@@ -61,6 +65,29 @@ public class Grounded_State : State
     public override State RunCurrentState()
     {
         checkAnim();
+
+        if (gotStun)
+        {
+            canInput = true;
+
+            //Debug.Log("in air");
+            isRunning = false;
+
+            holding_Down_Movement = false;
+
+            if (boolName != null)
+            {
+                Animator_.SetBool(boolName, false);
+
+                boolName = null;
+            }
+
+            startedAnim = false;
+
+            gotStun = false;
+
+            return Stun_;
+        }
 
         if (!IsGrounded())
         {
@@ -100,6 +127,11 @@ public class Grounded_State : State
         return this;
     }
 
+    public bool getRunning()
+    {
+        return isRunning;
+    }
+
     public void checkHorizontalMove()
     {
         if (isRunning && holding_Down_Movement)
@@ -125,6 +157,11 @@ public class Grounded_State : State
         {
             Rigidbody_.linearVelocityX = 0;
         }
+    }
+
+    public void doStun()
+    {
+        gotStun = true;
     }
 
     public void checkAnim()
@@ -244,10 +281,10 @@ public class Grounded_State : State
         
         input_string.Add(inputtype);
 
-        Debug.Log("Adding input: " + input_string.Count);
+        //Debug.Log("Adding input: " + input_string.Count);
         if (input_string.Count >= 2)
         {
-            Debug.Log("checking string: " + input_string[input_string.Count - 2] + " , " + input_string[input_string.Count - 1]);
+            //Debug.Log("checking string: " + input_string[input_string.Count - 2] + " , " + input_string[input_string.Count - 1]);
             checkString();
         }
     }

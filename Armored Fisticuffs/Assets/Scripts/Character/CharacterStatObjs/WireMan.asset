@@ -19,65 +19,30 @@ MonoBehaviour:
     Character_Jump: 3.75
   Grounded_Moves:
     Jab:
-      Hit_Anim: {fileID: 7400000, guid: 0f8ac2d555e8c754fa59a6637e584754, type: 2}
       Damage: 4
-      Hit_Size: {x: 0, y: 0}
-      Hit_Location: {x: 0, y: 0, z: 0}
-      Hurt_Size: {x: 0, y: 0}
-      Hurt_Location: {x: 0, y: 0, z: 0}
       Launch_Angle: {x: 1, y: 0}
-      Launch_Magnitude: 0.25
+      Launch_Magnitude: 1
     SideTilt:
-      Hit_Anim: {fileID: 7400000, guid: 115fad32ccdca8e45b3c7a1a57e5e1c6, type: 2}
       Damage: 12
-      Hit_Size: {x: 0, y: 0}
-      Hit_Location: {x: 0, y: 0, z: 0}
-      Hurt_Size: {x: 0, y: 0}
-      Hurt_Location: {x: 0, y: 0, z: 0}
-      Launch_Angle: {x: 1, y: 0.5}
-      Launch_Magnitude: 1
-    Heavy_SildeTilt:
-      Hit_Anim: {fileID: 7400000, guid: 30f6679996a6d064a85c0b2b5c2b7744, type: 2}
-      Damage: 25
-      Hit_Size: {x: 0, y: 0}
-      Hit_Location: {x: 0, y: 0, z: 0}
-      Hurt_Size: {x: 0, y: 0}
-      Hurt_Location: {x: 0, y: 0, z: 0}
       Launch_Angle: {x: 1, y: 0}
-      Launch_Magnitude: 1
+      Launch_Magnitude: 10
+    Heavy_SildeTilt:
+      Damage: 25
+      Launch_Angle: {x: 1, y: 0}
+      Launch_Magnitude: 20
     DownTilt:
-      Hit_Anim: {fileID: 7400000, guid: 3d6b790f1b29a9344b63ba7f3af88987, type: 2}
       Damage: 5
-      Hit_Size: {x: 0, y: 0}
-      Hit_Location: {x: 0, y: 0, z: 0}
-      Hurt_Size: {x: 0, y: 0}
-      Hurt_Location: {x: 0, y: 0, z: 0}
       Launch_Angle: {x: 0.5, y: -0.5}
-      Launch_Magnitude: 0.25
+      Launch_Magnitude: 5
     Heavy_Down_Tilt:
-      Hit_Anim: {fileID: 7400000, guid: c31d991d841370d45ab27f479c7d945a, type: 2}
       Damage: 18
-      Hit_Size: {x: 0, y: 0}
-      Hit_Location: {x: 0, y: 0, z: 0}
-      Hurt_Size: {x: 0, y: 0}
-      Hurt_Location: {x: 0, y: 0, z: 0}
       Launch_Angle: {x: 1, y: -2}
-      Launch_Magnitude: 2
+      Launch_Magnitude: 40
     UpTilt:
-      Hit_Anim: {fileID: 7400000, guid: f2a5862e9d4fd284e820de996776368a, type: 2}
       Damage: 9
-      Hit_Size: {x: 0, y: 0}
-      Hit_Location: {x: 0, y: 0, z: 0}
-      Hurt_Size: {x: 0, y: 0}
-      Hurt_Location: {x: 0, y: 0, z: 0}
       Launch_Angle: {x: 0.25, y: 1}
-      Launch_Magnitude: 1
+      Launch_Magnitude: 20
     Heavy_Up_Tilt:
-      Hit_Anim: {fileID: 7400000, guid: 6076ee08db9e8074b8470e9927a1b968, type: 2}
       Damage: 22
-      Hit_Size: {x: 0, y: 0}
-      Hit_Location: {x: 0, y: 0, z: 0}
-      Hurt_Size: {x: 0, y: 0}
-      Hurt_Location: {x: 0, y: 0, z: 0}
       Launch_Angle: {x: 2, y: 2}
-      Launch_Magnitude: 2
+      Launch_Magnitude: 5
